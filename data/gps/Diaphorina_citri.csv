@@ -1,0 +1,803 @@
+datasetKey,basisOfRecord,occurrenceStatus,species,decimalLongitude,decimalLatitude,stateProvince,year,month,day,issues,references,license,geodeticDatum,gbifID,catalogNumber,elevation,elevationAccuracy,continent,preparations,county,locality,type
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-80.367713,25.066389,Florida,2022,1,30,cdround,https://www.inaturalist.org/observations/105873528,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3466421344,105873528,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.262932,25.637836,Nuevo León,2022,2,19,cdround,https://www.inaturalist.org/observations/107078573,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3859087923,107078573,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-157.805841,21.287304,Hawaii,2022,4,30,cdround,https://www.inaturalist.org/observations/114109320,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3773721569,114109320,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.135168,25.398521,Nuevo León,2022,4,2,cdround,https://www.inaturalist.org/observations/110215129,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858252947,110215129,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.020393,34.108628,California,2022,5,2,cdround,https://www.inaturalist.org/observations/115603344,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3773590823,115603344,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.451614,34.040808,California,2022,5,10,cdround,https://www.inaturalist.org/observations/116649708,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3802694474,116649708,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.986511,22.157129,San Luis Potosí,2022,5,8,cdround,https://www.inaturalist.org/observations/116236704,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859163122,116236704,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-89.473557,20.357939,Yucatán,2022,5,23,cdround,https://www.inaturalist.org/observations/123530655,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3860228357,123530655,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.29627,34.018521,California,2022,6,17,cdround,https://www.inaturalist.org/observations/122259233,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858880129,122259233,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.264012,33.952122,California,2022,7,4,cdround,https://www.inaturalist.org/observations/124847126,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859746293,124847126,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.293589,33.865806,California,2021,1,5,cdround,https://www.inaturalist.org/observations/67640449,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3018096040,67640449,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-63.098572,18.015401,NA,2021,1,11,cdround,https://www.inaturalist.org/observations/67919021,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3031683589,67919021,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.263269,25.638033,Nuevo León,2021,1,12,cdround,https://www.inaturalist.org/observations/67974143,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3031756682,67974143,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.62844,34.152769,California,2021,1,17,cdround,https://www.inaturalist.org/observations/69460528,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3044554905,69460528,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296451,34.018251,California,2021,2,20,cdround,https://www.inaturalist.org/observations/69893406,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3044872677,69893406,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296303,34.018495,California,2021,3,2,cdround,https://www.inaturalist.org/observations/70470112,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3058893990,70470112,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.00441,34.122036,California,2021,3,29,cdround,https://www.inaturalist.org/observations/72414367,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3070667343,72414367,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-80.188308,26.267163,Florida,2021,3,13,cdround,https://www.inaturalist.org/observations/71171910,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3109164482,71171910,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-119.081242,34.339593,California,2021,3,13,cdround,https://www.inaturalist.org/observations/71931061,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3109175442,71931061,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.309699,25.745503,Nuevo León,2021,3,23,cdround,https://www.inaturalist.org/observations/71879420,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858299619,71879420,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-119.131097,34.227333,California,2021,4,9,cdround,https://www.inaturalist.org/observations/73464487,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3090607218,73464487,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,120.224253,22.971877,Tainan,2021,4,30,cdround,https://www.inaturalist.org/observations/75766057,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3112696538,75766057,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.100058,34.166262,California,2021,4,30,cdround,https://www.inaturalist.org/observations/76035984,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3124805435,76035984,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-116.868416,32.562642,Baja California,2021,4,2,cdround,https://www.inaturalist.org/observations/72723383,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3858228658,72723383,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.263259,25.638026,Nuevo León,2021,4,5,cdround,https://www.inaturalist.org/observations/73064516,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3858274620,73064516,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.263256,25.63803,Nuevo León,2021,4,5,,https://www.inaturalist.org/observations/73065515,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3859044600,73065515,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.263279,25.63804,Nuevo León,2021,4,19,cdround,https://www.inaturalist.org/observations/74555354,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3859368600,74555354,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-82.658017,28.352966,Florida,2021,5,14,cdround,https://www.inaturalist.org/observations/78741488,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3415942602,78741488,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-88.005964,15.397295,Cortés,2021,5,25,cdround,https://www.inaturalist.org/observations/80449631,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859197653,80449631,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-116.874881,32.446002,Baja California,2021,5,10,cdround,https://www.inaturalist.org/observations/78305484,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3859311662,78305484,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.263262,25.638032,Nuevo León,2021,5,6,cdround,https://www.inaturalist.org/observations/77647587,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3859953651,77647587,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-88.00621,15.397339,Cortés,2021,5,23,cdround,https://www.inaturalist.org/observations/80069277,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3860036666,80069277,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.254715,33.805189,California,2021,6,7,cdround,https://www.inaturalist.org/observations/83331857,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3307330206,83331857,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-88.005985,15.397312,Cortés,2021,6,9,cdround,https://www.inaturalist.org/observations/82388159,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858233691,82388159,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-98.903785,19.460258,México,2021,6,9,cdround,https://www.inaturalist.org/observations/82474403,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858236683,82474403,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-88.005983,15.397302,Cortés,2021,6,19,cdround,https://www.inaturalist.org/observations/83750212,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859265726,83750212,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-88.005991,15.397301,Cortés,2021,6,3,cdround,https://www.inaturalist.org/observations/81472247,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859338662,81472247,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-111.202553,28.990933,Sonora,2021,8,21,cdround,https://www.inaturalist.org/observations/92053395,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859950800,92053395,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-88.005978,15.397274,Cortés,2021,9,25,cdround,https://www.inaturalist.org/observations/96180657,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858300842,96180657,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.228187,33.235237,California,2021,12,25,cdround,https://www.inaturalist.org/observations/103660072,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858166888,103660072,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-111.202538,28.991158,Sonora,2021,12,5,cdround,https://www.inaturalist.org/observations/102553438,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859833875,102553438,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.135757,25.669079,Nuevo León,2020,2,23,cdround,https://www.inaturalist.org/observations/39233504,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2813926435,39233504,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-98.331067,26.180032,Texas,2020,2,4,cdround,https://www.inaturalist.org/observations/38414622,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2856514357,38414622,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-98.331059,26.180039,Texas,2020,2,4,cdround,https://www.inaturalist.org/observations/38414623,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2856525341,38414623,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.018855,34.119406,California,2020,2,1,cdround,https://www.inaturalist.org/observations/38202924,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3859885431,38202924,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-157.997341,21.478378,Hawaii,2020,3,25,cdround,https://www.inaturalist.org/observations/40728236,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2802799573,40728236,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.105655,34.128625,California,2020,4,18,cdround,https://www.inaturalist.org/observations/42513481,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2813881519,42513481,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.176076,34.124129,California,2020,4,18,cdround,https://www.inaturalist.org/observations/42513455,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2814148531,42513455,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-80.188308,26.267125,Florida,2020,4,23,cdround,https://www.inaturalist.org/observations/43004137,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3109194365,43004137,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-80.188247,26.26717,Florida,2020,4,27,cdround,https://www.inaturalist.org/observations/44198054,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3109276360,44198054,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-80.188417,26.2665,Florida,2020,4,23,cdround,https://www.inaturalist.org/observations/43134807,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3109281351,43134807,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.104012,34.070705,California,2020,5,29,cdround,https://www.inaturalist.org/observations/47944170,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2802726761,47944170,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-97.436641,20.55361,Veracruz,2020,5,13,cdround,https://www.inaturalist.org/observations/45809532,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2813887498,45809532,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-80.188263,26.267155,Florida,2020,5,5,cdround,https://www.inaturalist.org/observations/45012114,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3109193371,45012114,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-80.188263,26.267,Florida,2020,5,14,cdround,https://www.inaturalist.org/observations/45903845,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3109283361,45903845,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-75.654001,4.564811,Quindío,2020,7,26,cdround,https://www.inaturalist.org/observations/54420490,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2826385158,54420490,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296292,34.018478,California,2020,8,31,cdround,https://www.inaturalist.org/observations/58268831,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2859906262,58268831,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296263,34.018458,California,2020,8,23,cdround,https://www.inaturalist.org/observations/57396798,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2988341630,57396798,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296295,34.018464,California,2020,8,28,cdround,https://www.inaturalist.org/observations/57880884,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2988475656,57880884,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296283,34.018491,California,2020,8,20,cdround,https://www.inaturalist.org/observations/57043944,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2988606600,57043944,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-106.426109,23.193995,Sinaloa,2020,8,3,cdround,https://www.inaturalist.org/observations/55401152,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858190526,55401152,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.252047,34.044339,California,2020,8,3,cdround,https://www.inaturalist.org/observations/55328897,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859685527,55328897,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.260455,25.67191,Nuevo León,2020,9,21,cdround,https://www.inaturalist.org/observations/60366163,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2868378541,60366163,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.821466,33.831801,California,2020,9,26,cdround,https://www.inaturalist.org/observations/60923935,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,2988603706,60923935,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.328705,33.976762,California,2020,10,25,cdround,https://www.inaturalist.org/observations/66377499,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3005229602,66377499,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-100.442319,25.674606,Nuevo León,2020,11,11,cdround,https://www.inaturalist.org/observations/64687436,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2984565994,64687436,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-102.067709,18.966336,Michoacán,2020,11,20,cdround,https://www.inaturalist.org/observations/65611876,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859207586,65611876,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296363,34.018506,California,2020,12,2,cdround,https://www.inaturalist.org/observations/66021400,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3005081569,66021400,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.296303,34.018519,California,2020,12,31,cdround,https://www.inaturalist.org/observations/67376901,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3014019296,67376901,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-106.425857,23.194014,Sinaloa,2020,12,31,cdround,https://www.inaturalist.org/observations/67470424,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3859818586,67470424,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-97.012812,20.182886,Veracruz,2019,1,8,cdround,https://www.inaturalist.org/observations/19660395,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1990506710,19660395,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-89.621577,20.947588,Yucatán,2019,5,15,cdround,https://www.inaturalist.org/observations/25237028,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2243018238,25237028,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-90.109558,29.917867,Louisiana,2019,5,26,cdround,https://www.inaturalist.org/observations/25824869,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2251907448,25824869,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-82.497455,27.247533,Florida,2019,7,7,cdround,https://www.inaturalist.org/observations/28394383,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2283212575,28394383,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,88.364681,22.533982,West Bengal,2019,8,21,cdround,https://www.inaturalist.org/observations/33834658,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2818499365,33834658,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-95.62793,29.726712,Texas,2019,9,24,cdround,https://www.inaturalist.org/observations/33350546,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2423227819,33350546,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-95.627632,29.726469,Texas,2019,9,28,,https://www.inaturalist.org/observations/33602422,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2429303708,33602422,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-97.390025,20.723622,Veracruz,2019,12,20,cdround,https://www.inaturalist.org/observations/57994373,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,3858258595,57994373,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-47.565139,-22.414902,São Paulo,2018,1,26,cdround,https://www.inaturalist.org/observations/9669917,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1807286649,9669917,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-89.57495,21.017406,Yucatán,2018,3,22,cdround,https://www.inaturalist.org/observations/10370183,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1836674463,10370183,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.825323,33.919882,California,2018,3,25,cdround,https://www.inaturalist.org/observations/10423860,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1837073892,10423860,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.825348,33.91995,California,2018,3,25,cdround,https://www.inaturalist.org/observations/10423858,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1837073970,10423858,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.825328,33.919867,California,2018,3,25,cdround,https://www.inaturalist.org/observations/15744905,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1914195884,15744905,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.95055,33.933728,California,2018,4,11,cdround,https://www.inaturalist.org/observations/10797320,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1838053203,10797320,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.947202,33.929373,California,2018,4,15,cdround,https://www.inaturalist.org/observations/11000828,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1838355316,11000828,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.51885,34.195458,California,2018,4,12,cdround,https://www.inaturalist.org/observations/10835016,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1841192303,10835016,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.255026,33.804934,California,2018,4,18,cdround,https://www.inaturalist.org/observations/39503787,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2814100511,39503787,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.225932,33.321989,California,2018,6,12,cdround,https://www.inaturalist.org/observations/13386672,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1850973850,13386672,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-90.109536,29.917778,Louisiana,2018,7,21,cdround,https://www.inaturalist.org/observations/14576827,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2856633325,14576827,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-90.109589,29.917878,Louisiana,2018,8,19,cdround,https://www.inaturalist.org/observations/15740624,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2573788797,15740624,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-86.162666,12.148581,Managua,2018,10,12,cdround,https://www.inaturalist.org/observations/48502572,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2802577781,48502572,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-99.123933,24.074336,Tamaulipas,2017,3,31,cdround,https://www.inaturalist.org/observations/5572727,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1457610568,5572727,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,87.9819,22.317,NA,2017,5,17,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249872919,NA,NA,NA,NA,NA,NA,NA,NA
+393b8c26-e4e0-4dd0-a218-93fc074ebf4e,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,87.980003,22.32,NA,2017,5,17,gass84,https://www.ebi.ac.uk/ena/browser/view/MF964942,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3346760422,NA,12,0,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.210443,33.999208,California,2017,7,21,cdround,https://www.inaturalist.org/observations/7149358,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1584409860,7149358,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.325705,33.801533,California,2017,7,21,cdround,https://www.inaturalist.org/observations/7149359,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1584409894,7149359,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.774949,33.820989,California,2017,7,18,cdround,https://www.inaturalist.org/observations/7111901,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1640041704,7111901,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-102.307965,21.883703,Aguascalientes,2017,8,8,cdround,https://www.inaturalist.org/observations/7410334,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1586150859,7410334,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.266351,33.978635,California,2017,8,21,cdround,https://www.inaturalist.org/observations/7595754,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1640048103,7595754,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-82.577508,28.897324,Florida,2017,8,28,cdround,https://www.inaturalist.org/observations/56820744,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3044632641,56820744,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-82.575387,28.896133,Florida,2017,8,24,cdround,https://www.inaturalist.org/observations/55468326,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3044783652,55468326,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.950099,33.933193,California,2017,9,11,cdround,https://www.inaturalist.org/observations/7887620,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1640123171,7887620,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.950613,33.933658,California,2017,9,17,cdround,https://www.inaturalist.org/observations/7986055,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1668829509,7986055,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.385965,33.871001,California,2017,9,25,cdround,https://www.inaturalist.org/observations/8092623,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1677276931,8092623,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-117.950637,33.933675,California,2017,10,11,cdround,https://www.inaturalist.org/observations/8381475,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1677293398,8381475,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.114524,34.129045,California,2017,10,14,cdround,https://www.inaturalist.org/observations/8403674,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1677300119,8403674,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.212902,33.970259,California,2017,10,22,cdround,https://www.inaturalist.org/observations/8511856,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1677335393,8511856,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-82.575865,28.895424,Florida,2017,10,5,cdround,https://www.inaturalist.org/observations/58553239,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3044575670,58553239,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.072942,34.185595,California,2017,11,12,cdround,https://www.inaturalist.org/observations/8811366,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1945476352,8811366,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.353277,33.915301,California,2017,12,24,cdround,https://www.inaturalist.org/observations/9252016,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1802726717,9252016,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-70.005733,18.525751,Santo Domingo,2017,12,15,cdround,https://www.inaturalist.org/observations/9178416,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1945476578,9178416,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-89.424616,20.325302,Yucatán,2017,12,22,cdround,https://www.inaturalist.org/observations/26363827,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2252043982,26363827,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,39.1297,-4.55967,NA,2016,2,9,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979484708,icipe D_citri_1_Ke_Lunga Lunga,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,39.130001,-4.56,NA,2016,2,9,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229896,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349374984,icipe D_citri_2_Ke_Lunga Lunga,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.157788,34.200289,California,2016,4,18,cdround,https://www.inaturalist.org/observations/2968727,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1291072385,2968727,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.157766,34.200323,California,2016,4,18,cdround,https://www.inaturalist.org/observations/2968730,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1291072386,2968730,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.287933,34.016636,California,2016,4,19,cdround,https://www.inaturalist.org/observations/2986158,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1291072625,2986158,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.267762,34.080975,California,2016,4,15,cdround,https://www.inaturalist.org/observations/2945843,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2013024825,2945843,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.6464,-6.82533,NA,2016,5,20,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979486605,icipe D_citri_8_Tz_Mafiga,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.6675,-6.84044,NA,2016,5,20,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979489649,icipe D_citri_21_Tz_Magereza,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,39.2361,-6.04153,NA,2016,5,22,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979493596,icipe D_citri_7_Zanzibar_Selem,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,39.1297,-6.63653,NA,2016,5,21,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979498613,icipe D_citri_3_Tz_Viranda,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.6769,-6.85497,NA,2016,5,20,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979503658,icipe D_citri_12_Tz-Kireka,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,38.7372,-6.71597,NA,2016,5,21,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979646610,icipe D_citri_26_Tz_Mlandizi,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,39.0783,-7.61319,NA,2016,5,23,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979654665,icipe D_citri_2a_Tz_Bungu,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,39.5408,-4.46164,NA,2016,5,18,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979665643,icipe D_citri_23_Ke_Bomani,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,39.240002,-6.04,NA,2016,5,22,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229927,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349214194,icipe D_citri_7_Zanzibar_Selem,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.650002,-6.83,NA,2016,5,20,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229912,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349286496,icipe D_citri_4_Tz_Mafiga,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,39.080002,-7.61,NA,2016,5,23,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229897,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349302839,icipe D_citri_2a_Tz_Bungu,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,39.130001,-6.64,NA,2016,5,21,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229925,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349340379,icipe D_citri_3_Tz_Viranda,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.669998,-6.84,NA,2016,5,20,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229915,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349356896,icipe D_citri_21_Tz_Magereza,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,39.540001,-4.46,NA,2016,5,18,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229894,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349374094,icipe D_citri_23_Ke_Bomani,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.68,-6.85,NA,2016,5,20,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229904,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349374985,icipe D_citri_12_Tz-Kireka,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,38.740002,-6.72,NA,2016,5,21,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229898,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351632287,icipe D_citri_26_Tz_Mlandizi,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.8881,-6.74692,NA,2016,7,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979497644,icipe D_citri_2_Tz_Fuluwe,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.889999,-6.75,NA,2016,7,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229901,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349299959,icipe D_citri_3_Tz_Fuluwe,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.6769,-6.85489,NA,2016,8,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979490625,icipe D_citri_1_Tz_Kireka,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.8311,-7.03772,NA,2016,8,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979493597,icipe D_citri_1_Tz_Matombo,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.6594,-6.77978,NA,2016,8,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979501649,icipe D_citri_5_Tz_Kionda,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.6625,-6.84406,NA,2016,8,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979663662,icipe D_citri_1_Tz_Kididimo,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.830002,-7.04,NA,2016,8,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229916,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349249061,icipe D_citri_1_Tz_Matombo,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.66,-6.84,NA,2016,8,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229905,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349302840,icipe D_citri_1_Tz_Kididimo,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.66,-6.78,NA,2016,8,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229910,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349327106,icipe D_citri_5_Tz_Kionda,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.5611,-6.98617,NA,2016,9,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979491685,icipe D_citri_1_Tz_Mvomero,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.5717,-6.91286,NA,2016,9,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979512682,icipe D_citri_1_Tz_Musumbe,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,37.5706,-7.00269,NA,2016,9,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979676595,icipe D_citri_1_Tz-Mlali,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.57,-6.91,NA,2016,9,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229919,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349411858,icipe D_citri_1_Tz_Musumbe,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.57,-7,NA,2016,9,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229917,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349462175,icipe D_citri_1_Tz-Mlali,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,37.560001,-6.99,NA,2016,9,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229922,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351746504,icipe D_citri_2_Tz_Mvomero,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.232095,34.067592,California,2016,11,4,cdround,https://www.inaturalist.org/observations/4503133,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1453198255,4503133,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,38.8581,-5.15344,NA,2016,11,3,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2979639625,icipe D_citri_1_Tz_Tanga,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,38.860001,-5.15,NA,2016,11,3,gass84,https://www.ebi.ac.uk/ena/browser/view/MT229924,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3349385097,icipe D_citri_1_Tz_Tanga,NA,NA,NA,NA,NA,NA,NA
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-118.232097,34.067645,California,2016,12,21,cdround,https://www.inaturalist.org/observations/4828901,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,1805367690,4828901,NA,NA,NA,NA,NA,NA,NA
+bb71d4cb-6cc3-4730-a170-82912cc84475,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-87.57361,30.29417,Alabama,2014,8,5,"gass84,ambinst",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,2429172594,27084,NA,NA,NORTH_AMERICA,Pinned - 1,Baldwin County,Orange Beach,PhysicalObject
+50c9509d-22c7-4a22-a47d-8c48425ef4a7,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,23.513327,37.929079,Attica,2014,9,10,cdround,https://www.inaturalist.org/observations/14981166,http://creativecommons.org/licenses/by-nc/4.0/legalcode,WGS84,2397446645,14981166,NA,NA,NA,NA,NA,NA,NA
+bb71d4cb-6cc3-4730-a170-82912cc84475,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-87.52739,30.3038,Alabama,2014,10,22,"gass84,ambinst",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,2429172689,27093,NA,NA,NORTH_AMERICA,Pinned - 1,Baldwin County,Orange Beach,PhysicalObject
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,-108.48,25.79,NA,2012,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873218,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,-108.480003,25.790001,NA,2012,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001383,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351410176,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.6333,32.1,Punjab,2011,4,20,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,1415760216,HOP-00144,194,0,NA,NA,NA,"Sargodha, Risala No. 5",NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,73.0167,32.15,Punjab,2011,4,19,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,1415760251,HOP-00147,194,0,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.8,32.2,Punjab,2011,4,18,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,1415760270,HOP-00142,192,0,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.48,30.96,NA,2010,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873066,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.9,32.27,NA,2010,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873285,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,-98.16,26.3,NA,2010,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873333,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,114.25,22.37,NA,2010,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873903,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,99.97,8.39,NA,2010,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249874342,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,99.970001,8.39,NA,2010,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001380,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351386013,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,-98.160004,26.299999,NA,2010,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001382,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351427911,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,114.25,22.370001,NA,2010,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001384,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351464146,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.480003,30.959999,NA,2010,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001378,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351498977,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.900002,32.27,NA,2010,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001376,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351554931,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,73.1,30.66,NA,2009,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873099,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,-118.47,34.05,NA,2009,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873372,NA,NA,NA,NA,NA,NA,NA,NA
+040c5662-da76-4782-a48e-cdea1892d14c,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.8,31.82,NA,2009,1,1,gass84,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,2249873651,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,-118.470001,34.049999,NA,2009,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001381,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351411132,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,73.099998,30.66,NA,2009,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001379,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351469200,NA,NA,NA,NA,NA,NA,NA,NA
+d8cd16ba-bb74-4420-821e-083f2bac17c2,MATERIAL_SAMPLE,PRESENT,Diaphorina citri,72.800003,31.82,NA,2009,1,1,gass84,https://www.ebi.ac.uk/ena/browser/view/MH001377,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3351525170,NA,NA,NA,NA,NA,NA,NA,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-84.0247,9.9408,San José,2004,3,8,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982082,BMNH(E)1264061,NA,NA,NORTH_AMERICA,NA,NA,Montes de Oca Canton,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-59.5714,13.075,NA,2002,12,17,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982090,BMNH(E)1264001,NA,NA,NORTH_AMERICA,NA,NA,Graeme Hall,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,103.7895,1.296,Central,2000,4,10,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269974598,BMNH(E)1251793,NA,NA,ASIA,NA,NA,Ayer Rajah,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,73.5089,4.1753,NA,1998,7,25,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982060,BMNH(E)1263855,NA,NA,ASIA,NA,NA,Nearest Named Place: Male,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,73.0627,8.2884,Lakshadweep,1990,5,14,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982049,BMNH(E)1263843,NA,NA,ASIA,NA,NA,Minicoy,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,101.4407,3.0431,Selangor,1989,4,13,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981986,BMNH(E)1263868,NA,NA,ASIA,NA,NA,Klang (Nr),NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,85.8025,22.5474,Jharkhand,1989,4,2,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982174,BMNH(E)1263831,NA,NA,ASIA,NA,NA,Chaibasa,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,70.4579,21.5222,Gujarat,1988,3,30,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982125,BMNH(E)1263819,NA,NA,ASIA,NA,NA,Junagadh,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,55.6019,-20.9143,Saint-Denis,1986,6,25,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982115,BMNH(E)1264069,NA,NA,AFRICA,NA,NA,Sainte-Suzanne,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,106.8,-6.6,Jawa Barat,1986,11,23,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982008,BMNH(E)1263952,NA,NA,ASIA,NA,NA,Bogor,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,103.8465,1.2732,Central,1985,2,3,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269974409,BMNH(E)1251792,NA,NA,ASIA,NA,NA,Palmer Road,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,110.7122,-7.6145,Jawa Tengah,1984,12,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982030,BMNH(E)1263928,NA,NA,ASIA,NA,NA,Java,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-46.9432,-22.3679,São Paulo,1983,5,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982021,BMNH(E)1264025,NA,NA,SOUTH_AMERICA,NA,NA,Mogi Guaçu,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,57.5214,-20.1465,Port Louis,1983,11,8,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982065,BMNH(E)1264081,NA,NA,AFRICA,NA,NA,Abercrombie,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,78.5833,21.2667,Maharashtra,1981,11,22,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982156,BMNH(E)1264022,NA,NA,ASIA,NA,NA,Katol,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,120.9876,23.8388,Taiwan,1980,2,26,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981906,BMNH(E)1263832,NA,NA,ASIA,NA,NA,Nantou,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,73.0243,26.2389,Rajasthan,1970,2,13,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981964,BMNH(E)1264118,NA,NA,ASIA,NA,NA,Jodhpur,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,147.1902,-9.4816,National Capital District,1970,7,2,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981936,BMNH(E)1264096,NA,NA,ASIA,NA,NA,Port Moresby,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,85.3647,26.1209,Bihar,1970,8,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982119,BMNH(E)1263795,NA,NA,ASIA,NA,NA,Muzaffarpur,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,75.7833,26.8453,Rajasthan,1968,5,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982020,BMNH(E)1263818,NA,NA,ASIA,NA,NA,Durgapura,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,91.1329,26.3589,Assam,1968,NA,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982006,BMNH(E)1264009,NA,NA,ASIA,NA,NA,Kahikuchi,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,78.0681,27.8938,Uttar Pradesh,1966,2,19,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982031,BMNH(E)1263998,NA,NA,ASIA,NA,NA,Aligarh,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,78.0322,30.3165,Uttarakhand,1966,6,9,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982124,BMNH(E)1263854,NA,NA,ASIA,NA,NA,Dehradun,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,101.6083,3.1071,Selangor,1964,5,23,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982047,BMNH(E)1263892,NA,NA,ASIA,NA,NA,Petaling Jaya,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,90.4125,23.8103,Dhaka,1964,NA,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982075,BMNH(E)1264011,NA,NA,ASIA,NA,NA,Dhaka,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,114.1095,22.3964,Tsuen Wan,1963,5,9,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981983,BMNH(E)1263820,NA,NA,ASIA,NA,NA,NA,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,71.5805,34.015,N.W.F.P.,1962,3,6,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981987,BMNH(E)1264021,NA,NA,ASIA,NA,NA,Peshawar,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,78.8395,20.6845,Maharashtra,1962,7,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982040,BMNH(E)1263901,NA,NA,ASIA,NA,NA,Vidarbha Region,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,129.3874,28.2887,Kagoshima,1962,11,13,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982017,BMNH(E)1264036,NA,NA,ASIA,NA,NA,Amami-Oshima (Nr),NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,77.5946,12.9716,Karnataka,1956,7,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982108,BMNH(E)1264082,NA,NA,ASIA,NA,NA,Bangalore,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,87.855,22.9868,West Bengal,1956,7,10,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982120,BMNH(E)1264034,NA,NA,ASIA,NA,NA,NA,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,44.2561,14.9502,San`a',1938,3,8,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981992,BMNH(E)1264093,NA,NA,ASIA,NA,NA,Nearest Named Place: Jabal Jalal,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,131.0226,-13.1893,Northern Territory,1915,7,16,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269981956,BMNH(E)1263953,NA,NA,OCEANIA,NA,NA,Stapleton,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-68.99,12.1696,NA,1902,4,16,"cudc,gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982014,BMNH(E)1263989,NA,NA,NORTH_AMERICA,NA,NA,Nearest Named Place: Curaçao,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,113.2644,23.1292,Guangdong,NA,NA,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982083,BMNH(E)1264167,NA,NA,ASIA,NA,NA,Guangzhou,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-77.3554,25.048,New Providence,NA,NA,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982118,BMNH(E)1263977,NA,NA,NORTH_AMERICA,NA,NA,Nearest Named Place: New Providence,NA
+7e380070-f762-11e1-a439-00145eb45e9a,PRESERVED_SPECIMEN,PRESENT,Diaphorina citri,-86.2419,15.2,Olancho,NA,NA,NA,"gass84,colmano,inmafu",NA,http://creativecommons.org/publicdomain/zero/1.0/legalcode,WGS84,1269982123,BMNH(E)1264013,NA,NA,NORTH_AMERICA,NA,NA,NA,NA
+6ed43f52-25d1-4d56-a821-63a8564b81f6,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,-61.53977,16.19759,NA,NA,NA,NA,cum,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3846931169,NA,NA,NA,NA,NA,Guadeloupe,NA,NA
+6ed43f52-25d1-4d56-a821-63a8564b81f6,HUMAN_OBSERVATION,PRESENT,Diaphorina citri,55.53241,-21.13317,NA,NA,NA,NA,cum,NA,http://creativecommons.org/licenses/by/4.0/legalcode,WGS84,3847026687,NA,NA,NA,NA,NA,Réunion,NA,NA
+,,PRESENT,Diaphorina citri,-170.82886,-14.32664,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-170.58499,-14.272988,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-170.68767,-14.28962,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-170.75926,-14.34895,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-59.044857,-28.507731,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-57.919842,-30.985036,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-64.803149,-23.944207,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-64.16667,-23.43333,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-59.460833,13.155833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-59.617539,13.14517,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-88.401604,16.811663,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-74.885556,5.030556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-74.863576,4.354029,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-75.00753,4.19532,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-83.753428,9.748917,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-116.916855,32.454655,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-110.955919,29.072967,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-99.472267,21.2073,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-102.084917,19.429241,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-105.225332,20.653407,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-97.433525,16.010481,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-108.985882,25.790466,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-109.930367,27.482773,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-93.391389,17.830278,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-98.783333,22,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-103.874722,18.908889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-104.894589,21.504165,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-88.518226,18.502535,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-97.31353,20.72323,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-97.054526,20.061513,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-55.668964,-26.792362,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-67.048056,18.473889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-66.758134,18.454893,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-65.981944,18.436944,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-104.500541,37.169463,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-57.973889,-31.401111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-114.627692,32.692651,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-114.76772,32.490834,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-90.696012,30.061528,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-80.69475,32.376735,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-118.24366,34.052227,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-155.089629,19.718755,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-98.163343,26.301737,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-97.396381,27.800583,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-95.369803,29.760427,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-99.786168,29.209684,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-98.549378,28.461508,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-98.460466,29.457978,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.849611,7.405528,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.912056,7.813972,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.218806,7.868167,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.445361,7.546556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-157.094722,21.137778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-156.506944,20.852222,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-89.833611,29.586667,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-92.216389,30.063889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-90.03,29.753611,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-88.781667,30.7525,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-88.703333,34.257778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-88.638333,34.513611,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-81.036667,33.851111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-79.846667,33.913889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-98.067222,26.177778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-98.337222,26.336389,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-97.396667,26.132222,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-64.728333,18.333889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-64.77,17.743611,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-79.874722,-2.085556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-97.957778,26.164167,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-81.430556,27.527778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-88.382222,30.491667,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-119.022778,34.285833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-118.862778,35.348056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-84.095278,31.016111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-81.809444,27.177778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-81.007222,26.303333,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-41.842556,-12.434528,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-41.725139,-12.489278,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.107142,-23.028483,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.141011,-23.607831,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.675557,-22.90485,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.161789,-23.7786,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.049179,-23.065388,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.122277,-22.759884,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.688862,-22.803046,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.788586,-23.076115,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.67487,-23.119952,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.40358,-22.647316,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.71944,-22.558863,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.523938,-22.819582,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.531014,-22.519858,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.58081,-22.640644,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.318496,-22.411974,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.810554,-21.851672,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.913866,-21.711019,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.751769,-20.695268,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.930494,-20.537829,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.57723,-20.334708,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.039268,-20.983349,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.911649,-20.802607,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.959744,-21.025671,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.858937,-20.873713,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.404324,-21.086395,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.660616,-20.96147,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.55257,-20.44115,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.908724,-19.628381,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.972665,-19.736939,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.054029,-20.003089,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.869986,-19.972923,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-52.318889,-23.131389,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-56.370556,-26.190833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-57.508333,-25.567778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-57.008611,-23.226111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-57.151944,-25.625833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.631944,-23.533889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-81.706111,28.420833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-80.83,27.243889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-61.561944,16.254722,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-61.846944,17.1275,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-81.273333,19.280833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-77.140833,17.923056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-69.909167,18.471111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.184583,-0.220783,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,57.424,23.391,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,57.67,23.044,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,57.855833,23.706667,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,100.59,26.01,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,101.14,26.38,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,102.21,27.48,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.34,28.15,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.941944,25.376111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.988333,25.048333,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,105.91,25.15,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.61,22.52,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.76,25.43,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.79,22.34,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,107.078611,22.128056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,108.28,23.1,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,108.52,25.93,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.05,27.08,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.06,25.52,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.12,21.47,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.21,24.66,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.37,26.19,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110,19.44,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.02,25.81,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.19,20.02,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.21,25.24,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.3,25.11,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.35,25.48,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.38,24.91,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.43,24.54,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.59,22.55,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.65,24.68,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.7,26.1,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.83,24.87,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.05,26,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.1,25.57,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.24,25.39,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.4,24.95,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.47,25.35,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.63,23.38,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.27,23.03,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.78,23.58,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.2644,23.1292,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.36,23.16,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.05,25.39,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.1095,22.3964,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.211957,22.327877,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.25,25.47,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.45,25.39,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.53,26.6,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.55,25.23,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.55,25.51,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.1,24.49,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.37,26.12,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.38,24.57,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,116.01,25.5,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,116.4,27.3,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,117.41,23.8,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,117.77,24.74,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.45,25.7,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.46,27.82,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.59,28.12,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.81,25.97,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.31,26.1,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.77,28.36,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.4,27.5,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.57,29.11,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.9876,23.8388,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.01,29.08,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.15,28.63,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.2,28.38,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.25,28.55,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.27,28.65,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.51,29.29,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.9605,23.6994,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.090278,24.478889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.9228,28.4676,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.0983,22.8004,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.4368,23.4004,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.57,22.7686,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.4966,24.7785,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.3485,22.5246,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.2437,26.9651,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.6008,25.5246,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.1302,18.8253,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.1973,19.5703,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,102.7626,27.0792,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,100.5751,25.8273,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,98.8624,24.9875,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,97.8635,24.0219,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.3168,23.5892,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.019727,28.5147,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.324,24.355,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.8642,25.0742,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.215278,21.798889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.465,23.063889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.570833,28.265278,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.01,19.745556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.324167,20.043056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.993611,22.918056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.930156,25.858614,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.646247,24.960817,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.178456,24.819606,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.618461,25.844089,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.750597,25.662203,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.094736,25.664681,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.417778,25.793889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,105.8534,25.0111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.106918,25.346,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.119167,-4.551667,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.576389,-4.165,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.888,-6.746917,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.662472,-6.844056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.810833,-7.123889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.57175,-6.912861,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.857944,-5.153444,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,101.41234,21.1144,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.152792,30.267443,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,72.904714,32.275141,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,73.079107,31.418714,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,72.80274,31.82526,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,73.497343,32.588169,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,73.108576,30.661181,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,72.723141,32.003973,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,72.430253,32.286612,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,73.050454,31.592714,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,72.483333,30.966667,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,71.468703,30.198381,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,73.935097,32.113041,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,55.471843,-21.332838,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,45.079162,23.885942,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.73,1.338333,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.834722,1.292778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,99.978176,8.391284,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,100.512641,13.786902,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,81.007222,26.302778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,74.213611,27.016667,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,78.6275,11.114444,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,94.701944,28.256389,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,71.176944,22.2725,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,75.714167,15.320556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,93.904444,24.672222,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,88.511389,27.535556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,76.261944,10.858611,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,78.6525,23.020833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,76.079722,29.078611,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,76.269167,32.100278,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,79.759444,15.938611,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,92.935833,26.223889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,92.088333,25.250833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,75.338611,19.771667,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,87.841389,22.993889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,91.986389,23.95,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,77.1,28.706389,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,85.296389,25.109722,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,144.873611,13.584167,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,144.757778,13.390556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.691389,1.546944,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.42,1.461111,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.348889,1.460556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,116.092778,5.955833,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,102.418056,3.982778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,141.010833,-2.610556,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,141.271667,-2.663056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,147.193611,-9.448056,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,134.043056,-2.772778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,130.811667,32.654167,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.7025,-7.588611,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.182778,-8.4075,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,105.833611,21.027778,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.568056,25.031389,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,57.541667,-20.338889,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,55.66,-20.975,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,31.783056,-1.403333,,,,,,Response of Asian citrus psyllid Diaphorina citri Kuwayama (Hemiptera: Liviidae) to climate change.  ,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.49678594,-20.96027124,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.82932814,-21.06379321,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.32617911,-20.65735336,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.21994569,-20.12411537,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.25230512,-21.22480831,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.81647263,-23.20452798,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.43938894,-23.38691846,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.12722157,-23.20313579,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.47366979,-23.24563999,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.42576126,-22.80684331,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.96126111,-22.92333411,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.34099528,-23.05062592,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.72620685,-20.46312434,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.31947417,-20.85378979,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.56075048,-21.00509705,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.95227662,-20.8411003,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.05817582,-21.10406946,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.83729616,-21.25992835,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.50265803,-21.3471947,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.19299536,-21.28660343,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.08122422,-22.27327484,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.17416904,-22.48070155,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.73734463,-22.232352,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.86716061,-21.91875378,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.27101813,-22.05639758,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.6289403,-22.74943508,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.05931558,-21.95269501,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.39030607,-21.92543458,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.35621771,-22.16464904,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.53803976,-21.78557653,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.18759737,-22.5291287,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.54497784,-22.45905779,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.93889704,-22.519234,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.98303834,-22.17765105,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.69026092,-22.23894766,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-50.17854846,-22.18755694,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.82557659,-21.65219049,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.97180245,-22.26989969,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.76407159,-23.75853164,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.31225403,-23.68352671,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.87021236,-23.96035881,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.26499162,-23.8361307,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.97510771,-23.44061696,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.18247184,-23.99390365,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.64293162,-23.03472238,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.99542509,-22.64291683,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.98839778,-22.45133781,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.1411348,-22.36930154,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.29228582,-22.57677137,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.60102914,-22.65146417,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.78701079,-22.45097782,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.77271602,-22.67370826,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.48046072,-22.51573547,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.40991273,-22.30977952,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.02182001,-22.2324356,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.20514523,-22.70549686,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.28778988,-21.63207613,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.79677459,-21.90898376,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.76519132,-21.59252044,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.2050111,-21.52190329,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.56457491,-21.35525385,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.67635851,-21.60548612,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.85809267,-21.81389528,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-46.70775652,-21.49982961,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.07121984,-21.88893372,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.3807623,-21.95345965,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-47.15715411,-21.50885143,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.22169412,-20.53215335,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.46174238,-20.19196223,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.66868448,-20.51014198,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.6070307,-21.10101001,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-49.62471577,-20.78362991,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.99864163,-19.95408839,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.71723224,-19.11346994,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,-48.20859031,-19.67729315,Brazil,2017-2022,,,sticky traps,Dr Renato Bassanezi from Funde Citrus in Brazil,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,2.48901667,6.37331944,"Agblangandan, Oueme",2021,,,lime,https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,2.34270833,6.43464722,"Abomey Calavi, Atlantique",2021,,,sweet orange,https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,2.328175,6.4317,"Tankpe, Atlantique",2021,,,Orange jasmine,https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,2.59710278,9.31865833,"Parakou, Borgou",2021,,,"Sweet orange, grapefruit, orange jasmine",https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.38358889,10.29048611,"Kalale, Borgou",2021,,,"Lime, tangerine",https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.38051111,10.28621111,"Kalale, Borgou",2021,,,"Sweet orange, lime",https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,2.07644167,7.38131667,"Setto, Zou",2021,,,Valencia Sweet orange,https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,2.07520556,7.39147778,"Setto, Zou",2021,,,Valencia Sweet orange,https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,2.190075,7.20504722,"Cove, Zou",2021,,,Valencia Sweet orange,https://doi.org/10.1038/s41598-023-28030-3,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.2969,26.07877,"China, Fuzhou",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.6593,-5.22041,"Tanzania, Mafiga",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.1258,-4.93511,"Tanzania, Mikese",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.6626,-5.15616,"Tanzania, Mlali",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.0844,0.16696,"Kenya, Awasi",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.1926,-0.2073,"Kenya, Koitamburot",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.1221,-4.56247,"Kenya, Lungalunga",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.1469,0.09243,"Kenya, Soin",,,,,https://doi.org/10.1371/journal.pone.0235348,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,100.59,26.01,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,101.14,26.38,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,102.21,27.48,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.34,28.15,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.59,28.24,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.84,28.67,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,105.91,25.15,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.61,22.52,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.76,25.43,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.79,22.34,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.84,22.38,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,107.08,22.13,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,108.28,23.1,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,108.52,25.93,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.05,27.08,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.06,25.52,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.12,21.47,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.21,24.66,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.37,26.19,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.99,25.05,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110,19.44,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.02,25.81,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.19,20.02,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.21,25.24,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.3,25.11,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.35,25.48,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.38,24.91,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.43,24.54,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.59,22.55,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.65,24.68,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.7,26.1,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.83,24.87,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.05,26,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.1,25.57,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.24,25.39,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.4,24.95,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.47,25.35,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.63,23.38,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.27,23.03,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.78,23.58,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.2644,23.1292,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.28,23.11,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.3,23.1,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.36,23.16,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.05,25.39,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.1095,22.3964,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.211957,22.327877,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.25,25.47,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.45,25.39,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.53,26.6,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.55,25.23,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.55,25.51,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.1,24.49,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.37,26.12,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.38,24.57,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,116.01,25.5,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,116.4,27.3,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,117.41,23.8,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,117.77,24.74,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.45,25.7,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.46,27.82,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.59,28.12,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.81,25.97,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.31,26.1,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.77,28.36,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.4,27.5,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.57,29.11,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.9876,23.8388,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.01,29.08,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.15,28.63,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.18,28.62,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.2,28.38,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.24,28.63,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.25,28.55,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.27,28.65,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.51,29.29,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.9605,23.6994,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.0894,24.4798,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.9228,28.4676,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.0983,22.8004,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.4368,23.4004,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.3569,23.1613,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.57,22.7686,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.4966,24.7785,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.3485,22.5246,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.2437,26.9651,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.6008,25.5246,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.1302,18.8253,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.1973,19.5703,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,102.7626,27.0792,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,100.5751,25.8273,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,98.8624,24.9875,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,97.8635,24.0219,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.3168,23.5892,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.517058,25.455493,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.019727,28.5147,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.324,24.355,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.47,25.35,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.8642,25.0742,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,113.30485,23.1029,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.303072,25.1192,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,109.2152778,21.79888889,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.465,23.06388889,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,103.5708333,28.26527778,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.01,19.74555556,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.3241667,20.04305556,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.9227778,25.38666667,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.4727778,23.06444444,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.9936111,22.91805556,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.0152778,19.74138889,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,110.3277778,20.0475,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.9301556,25.85861389,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.6462472,24.96081667,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.1784556,24.81960556,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,115.6184611,25.84408889,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.7505972,25.66220278,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.0947361,25.66468056,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.4177778,25.79388889,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,100.59,26.0132,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.344379,26.13262,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,112.7819,23.582,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.2122,28.38189,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,111.63315,23.3804,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,108.28244,23.107897,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,121.18,28.629,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,119.7751,28.3662,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,117.77579,24.749454,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.7642,25.4329,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,108.5266,25.932938,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,105.8534,25.0111,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,114.9402,25.3763,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,118.106918,25.346,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,120.367,27.52964,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,106.6142,22.5213,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,107.082594,22.138523,China,,,,,https://figshare.com/articles/dataset/world_occurrences_of_Diaphorina_citri_Kuwayama_/7564685,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.6593,-5.22041,Tanzania,,,,,10.1093/jee/toaa113,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.1258,-4.93511,Tanzania,,,,,10.1093/jee/toaa113,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.6626,-5.15616,Tanzania,,,,,10.1093/jee/toaa113,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.0844,0.16696,Kenya,,,,,10.1093/jee/toaa113,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.1926,-0.2073,Kenya,,,,,10.1093/jee/toaa113,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.1221,-4.56247,Kenya,,,,,10.1093/jee/toaa113,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.1469,0.09243,Kenya,,,,,10.1093/jee/toaa113,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.660389,-6.847861,"Tanzania, Morogoro",,,,,Aruna,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,36.990556,-7.402139,"Tanzania, Mikumi",,,,,Aruna,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,36.421861,-7.547194,"Tanzania, Mtankdika",,,,,Aruna,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.6985,-7.792389,"Tanzania, Iringa",,,,,Aruna,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.41127778,1.23825,Utithini,,,,,Machakos et al. 2021,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.43927778,1.317583333,Kanduu,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.58152778,1.519638889,Ngundu,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.54380556,1.8105,Nthangathini,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.58538889,1.819166667,Ngutwa,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.57230556,1.758416667,Kiatine,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.57402778,3.490166667,Kwen-silo,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.574,3.501527778,Ngona,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.732,3.612916667,Nyika,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.75761111,3.568916667,Rukinga Ranch,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,40.06012778,3.263972222,Msabaha,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.79413889,3.18575,Baolala,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,40.02283333,3.2245,Kwa Upanga,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.57322222,4.165583333,Makondeni,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.44641667,4.295555556,Tangine,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.13008333,4.560166667,Nayeni,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.52322222,4.321583333,Muhaka,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.52452778,4.32425,Muhaka,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,40.16085,10.36524444,Naliendele,,,,,,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.849611111,7.405527778,"NIHORT, Ibadan",,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.8495,7.403333333,"NIHORT, Ibadan",,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.846833333,7.406166667,"NIHORT, Ibadan",,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.818166667,7.415472222,"Agbo eti, Ibadan",,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.859138889,7.401916667,"Idi-Ishin, Ibadan",,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.912055556,7.813972222,Oyo town,,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.218805556,7.868166667,Adejumo (Igana),,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.177694444,7.854111111,Tudi,,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,3.445361111,7.546555556,Eruwa,,,,,Oke et al. 2020 https://www.nature.com/articles/s41598-020-66380-4,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.67683333,6.854888889,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.81391667,7.037722222,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.67047222,7.002694444,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.57175,6.912861111,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.65941667,6.779777778,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.65941667,6.779777778,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.65941667,6.779777778,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.888,6.746916667,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.66247222,6.844055556,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.85794444,5.153444444,Tanga,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.56108333,6.986166667,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.56108333,6.986166667,Morogoro,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.33425,6.636527778,Viranda,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.33425,6.636527778,Viranda,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.64655556,6.825333333,Mafiga,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.67688889,6.854972222,Kireka,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,37.66744444,6.840444444,Magereza,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.07838889,7.613194444,Bungu,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,38.73713889,6.715972222,Mladizi,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.23605556,6.041527778,Selem Zanzibar,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.12972222,4.559666667,Lungalunga Zanzibar,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,39.54075,4.461638889,Bomani Kenya,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.14575,0.235333333,Soin Kenya,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
+,,PRESENT,Diaphorina citri,35.22136111,0.206611111,Koitaburot Kenya,,,,,Rwomushana et al. 2017 https://doi.org/10.1007/s10530-017-1502-5,,,,,,,,,,,
