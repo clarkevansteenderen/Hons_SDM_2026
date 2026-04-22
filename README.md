@@ -19,8 +19,4 @@ Use this downloaded folder as your working directory, where you save all outputs
 
 ``daily_exercises.html`` file
 
-### 🟣 Course assignment 
-
-``SDM_assignment.html``
-
 
