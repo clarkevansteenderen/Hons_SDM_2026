@@ -9,7 +9,7 @@ This introductory module to Species Distribution Modelling (SDM) will guide you 
 ### 🟣 Download this repository by clicking **Code** ➡️ **Download ZIP"**
 Use this downloaded folder as your working directory, where you save all outputs.
 
-### Download the [Koppen-Geiger layer here](https://www.gloh2o.org/koppen/) 
+### 🟣 Download the [Koppen-Geiger layer here](https://www.gloh2o.org/koppen/) 
 
 ### 🟣 Introductory SDM exercise
 
@@ -19,6 +19,8 @@ Use this downloaded folder as your working directory, where you save all outputs
 
 ``daily_exercises.html`` file
 
-### 🟣 The course assignment is in the ``SDM_assignment/`` directory. 
+### 🟣 Course assignment 
+
+``SDM_assignment/`` directory
 
 
