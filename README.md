@@ -21,6 +21,6 @@ Use this downloaded folder as your working directory, where you save all outputs
 
 ### 🟣 Course assignment 
 
-``SDM_assignment/`` directory
+``SDM_assignment.html``
 
 
