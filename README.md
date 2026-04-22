@@ -7,7 +7,7 @@ This introductory module to Species Distribution Modelling (SDM) will guide you 
 ### 🟣 The course handout is [here]()
 
 ### 🟣 Download this repository by clicking **Code** ➡️ **Download ZIP"**
-Use this downloaded folder as your working directory, where you save all outputs.
+Use this downloaded folder as your working directory, where you save all outputs. Open the **RProject** file to get started, and create scripts as you work through the HTML instructions for each exercise.
 
 ### 🟣 Download the [Koppen-Geiger layer here](https://www.gloh2o.org/koppen/) 
 
