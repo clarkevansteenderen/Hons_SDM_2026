@@ -6,21 +6,25 @@ This introductory module to Species Distribution Modelling (SDM) will guide you 
 
 ### 🟣 The course handout is [here]()
 
-### 🟣 Download this repository by clicking **Code** ➡️ **Download ZIP"**
+### 🟣 Download this repository by clicking **Code** ➡️ **Download ZIP"**    
 Use this downloaded folder as your working directory, where you save all outputs. Open the **RProject** file to get started, and create scripts as you work through the HTML instructions for each exercise.
 
-### 🟣 Download the [Koppen-Geiger layer here](https://www.gloh2o.org/koppen/) 
+### 🟣 Daily R exercises     
+Building R skills, building towards running an SDM analysis    
+📁 ``daily_exercises.html`` file
 
-### 🟣 Introductory SDM exercise
+### 🟣 Introductory SDM exercise    
+Basic rasters, using a binomial GLM to estimate probability of presence, and thresholding predictions    
+📁 ``introductory_sdm_exercise.html``
 
-``introductory_sdm_exercise.html``
+### 🟣 Asian citrus psyllid SDM workflow    
+A full-on SDM pipeline to create predictive maps for ACP in South AFrica    
+📁 ``asian_citrus_psyllid_SDM_workflow.html``
 
-### 🟣 Daily R exercises 
-
-``daily_exercises.html`` file
-
-### 🌐 Links
+### 🌐 Links    
 
 [WorldClim Bioclimatic Database](https://www.worldclim.org/data/bioclim.html)
+
+[Koppen-Geiger layer](https://www.gloh2o.org/koppen/) 
 
 
