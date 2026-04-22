@@ -19,4 +19,8 @@ Use this downloaded folder as your working directory, where you save all outputs
 
 ``daily_exercises.html`` file
 
+### 🌐 Links
+
+[WorldClim Bioclimatic Database](https://www.worldclim.org/data/bioclim.html)
+
 
