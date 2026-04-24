@@ -1,4 +1,4 @@
-# Honours Species Distribution Modelling 👨‍🎓
+# Honours Species Distribution Modelling 🦒 🐘 🦅 🪱 🐛
 *Clarke van Steenderen*    
 *Department of Zoology and Entomology, Rhodes University*
 
