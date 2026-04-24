@@ -10,7 +10,7 @@ This introductory module to Species Distribution Modelling (SDM) will guide you 
 Use this downloaded folder as your working directory, where you save all outputs. Open the **RProject** file to get started, and create scripts as you work through the HTML instructions for each exercise.
 
 ### 🟣 Daily R exercises     
-Building R skills, building towards running an SDM analysis    
+Sharpen R skills, building towards running an SDM analysis    
 📁 ``daily_exercises.html`` file
 
 ### 🟣 Introductory SDM exercise    
