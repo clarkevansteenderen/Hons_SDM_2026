@@ -4,7 +4,7 @@
 
 This introductory module to Species Distribution Modelling (SDM) will guide you through all the steps needed to create your first prediction models in R. We will use the Asian Citrus Psyllid (*Diaphorina citri*) as a case study, and generate a predictive model based on global climate variables and elevation data. *Diaphorina citri* is a major citrus pest and has caused significant financial losses to citrus industries in many regions; in some cases it has threatened their existence. The psyllid is native to Asia, but has spread across the world. It has been recorded in Africa, but it has not dispersed as far south as South Africa yet.
 
-### 🟣 The course handout is [here]()
+### 🟣 The course handout is [here](https://github.com/clarkevansteenderen/Hons_SDM_2026/blob/main/SDM_Honours_2026.pdf)
 
 ### 🟣 Download this repository by clicking **Code** ➡️ **Download ZIP"**    
 Use this downloaded folder as your working directory, where you save all outputs. Open the **RProject** file to get started, and create scripts as you work through the HTML instructions for each exercise.
