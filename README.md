@@ -11,7 +11,7 @@ Use this downloaded folder as your working directory, where you save all outputs
 
 ### 🟣 Daily R exercises     
 Sharpen R skills, building towards running an SDM analysis    
-📁 ``daily_exercises.html`` file
+📁 ``daily_exercises.html``   
 
 ### 🟣 Introductory SDM exercise    
 Basic rasters, using a binomial GLM to estimate probability of presence, and thresholding predictions    
