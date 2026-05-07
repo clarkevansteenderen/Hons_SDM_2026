@@ -1,0 +1,76 @@
+---
+title: "GLM_exercise_3"
+author: "Clarke van Steenderen"
+date: "2025"
+output: html_document
+---
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Practice exercise 3
+
+```{r, message = FALSE}
+if (!require("pacman"))
+  install.packages("pacman")
+pacman::p_load(xlsx, janitor, ggplot2, Rmisc, dplyr, 
+               tidyverse, visreg, glmmTMB, gtsummary, effects, ggeffects,
+               patchwork, emmeans, GLMsData)
+
+# Set plot theme
+theme_set(theme_classic() +
+theme(panel.border = element_rect(colour = "black", fill = NA),
+axis.text = element_text(colour = "black"),
+axis.title.x = element_text(margin = unit(c(2, 0, 0, 0), "mm")),
+axis.title.y = element_text(margin = unit(c(0, 4, 0, 0), "mm")),
+legend.position = "none"))
+```
+
+Make some plots:
+
+```{r}
+library(GLMsData)
+data("cheese")
+
+ggplot2::ggplot(data = cheese, aes(x = Acetic, y = Taste)) +
+  geom_point() + 
+  geom_smooth(method = "lm", linewidth = 1, col = "darkgrey", fill = "yellow", alpha = 0.2, se = TRUE)
+
+ggplot2::ggplot(data = cheese, aes(x = H2S, y = Taste)) +
+  geom_point() +
+  geom_smooth(method = "lm", linewidth = 1, col = "darkgrey", fill = "lightgreen", alpha = 0.2, se = TRUE)
+
+ggplot2::ggplot(data = cheese, aes(x = Lactic, y = Taste)) +
+  geom_point() +
+  geom_smooth(method = "lm", linewidth = 1, col = "darkgrey", fill = "beige", alpha = 0.5, se = TRUE)
+
+```
+
+Run GLMs:
+
+```{r}
+cheese.glm.1 = glm(Taste ~ Acetic, data = cheese, family = gaussian)
+cheese.glm.2 = glm(Taste ~ H2S, data = cheese, family = gaussian)
+cheese.glm.3 = glm(Taste ~ Lactic, data = cheese, family = gaussian)
+
+cheese.glm.4 = glm(Taste ~ Acetic + H2S, data = cheese, family = gaussian)
+cheese.glm.5 = glm(Taste ~ Acetic + Lactic, data = cheese, family = gaussian)
+cheese.glm.6 = glm(Taste ~ H2S + Lactic, data = cheese, family = gaussian)
+
+cheese.glm.7 = glm(Taste ~ Acetic + H2S + Lactic, 
+                   data = cheese, family = gaussian)
+
+anova(cheese.glm.1, cheese.glm.2, test = "Chisq")
+anova(cheese.glm.2, cheese.glm.3, test = "Chisq")
+anova(cheese.glm.4, cheese.glm.5, test = "Chisq")
+anova(cheese.glm.5, cheese.glm.6, test = "Chisq")
+anova(cheese.glm.6, cheese.glm.7, test = "Chisq")
+
+DHARMa::simulateResiduals(cheese.glm.7, plot = TRUE)
+
+car::Anova(cheese.glm.7, test = "LR", type = "II")
+summary(cheese.glm.7)
+
+```
+
+It appears that only lactic content has a significant effect on taste score, where a one unit increase in lactic content results in a 25.01 increase in taste score.

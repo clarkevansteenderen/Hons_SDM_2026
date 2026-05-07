@@ -1,0 +1,377 @@
+---
+title: "Basic ggplots in R"
+author: "Clarke van Steenderen"
+date: "2025-02"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Using ggplot to create basic plots
+
+Here, we will use the popular **iris** dataset, collected by Edgar Anderson in 1936, to illustrate how ggplot can be used to create elegant and attractive graphics. It contains sepal and petal measurements for 50 individuals from three *Iris* species; namely *I. setosa*, *I. versicolor*, and *I. virginica*. 
+
+Check the R [dataset](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html) package for other interesting data sets to tinker with.
+
+**Some notes on syntax:**
+
+* **package_name::** specifies the package name, where the two colons access all the functions associated with that package
+* Hashes (#) denote comments, that are not read by R. Use these to annotate your code
+* In ggplot, the plus sign (+) means that you are adding additional "layers" to your plot
+* An equal sign (=) is synonymous with the arrow (<-). You can use either to assign names to objects
+* Dollar signs ($) are like keys that access features of an object, such as columns or lists
+* Use a question mark (?) to access the help file for a particular package (e.g. **?ggplot**)
+
+**Let's get started!**
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+if (!require("pacman"))
+  install.packages("pacman")
+pacman::p_load(datasets, xlsx, janitor, ggplot2, Rmisc, dplyr, ggpubr)
+
+# access the embedded dataset
+iris_data = datasets::iris
+iris_data = janitor::clean_names(iris_data)
+
+# for practice, write this data to the project folder as a .csv file
+write.csv(iris_data, file = "data/iris_data.csv", quote = FALSE, row.names = FALSE)
+
+# now read it back in 
+iris_data_readin = read.csv("data/iris_data.csv")
+
+# now as an Excel file
+xlsx::write.xlsx(iris_data, file = "data/iris_data.xlsx", 
+                 sheetName = "iris_data", row.names = FALSE)
+
+iris_data_readin_xlsx = xlsx::read.xlsx(file = "data/iris_data.xlsx", sheetIndex = 1)
+
+# make iris species a factor/grouping variable
+iris_data$species = as.factor(iris_data$species)
+levels(iris_data$species)
+
+# summarySE function gets summary statistics for a chosen variable across groups
+petal_summary = Rmisc::summarySE(data = iris_data, measurevar = "petal_length", 
+                                 groupvars = "species")
+
+```
+
+There are a number of ways in R to refer to a particular column in a data set. Have a look a the code below, where we can access the **sepal_width** column in five different ways:
+
+```{r eval=FALSE, warning=FALSE, message=FALSE}
+
+# using the dollar operator - I find this the most intuitive
+iris_data$sepal_width
+
+# this says "access the values in all the rows in column 2"
+iris_data[, 2]
+
+# a few other approaches to do exactly the same thing
+iris_data[[2]]
+iris_data[["sepal_width"]]
+iris_data[, "sepal_width"]
+
+# using the dplyr package:
+
+# select
+dplyr::select(iris_data, sepal_width)
+
+# pull
+iris_data %>%
+  dplyr::pull(sepal_width)
+
+```
+
+Perhaps you would like to access the petal lengths for rows 1 to 5 only. Here's how you can do this: 
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+
+iris_data[1:5, 3]
+
+# or using dplyr
+iris_data %>%
+  dplyr::slice(1:5) %>%   # Select rows 1 to 5
+  dplyr::pull(3) # pull out the third column only
+
+# Have a look at a summary of a particular subset of your data.
+# Here we'll look at sepal lengths:
+summary(iris_data$sepal_length)
+
+# Take a quick glance at the structure of the dataset:
+str(iris_data)
+
+# Check the data type:
+class(iris_data)
+
+# Have a precursory glance at the first few rows:
+head(iris_data)
+
+# use the glimpse function in the dplyr package:
+dplyr::glimpse(iris_data)
+
+```
+
+Note that there are always two spaces for values in the square brackets. The first value refers to the row number, and the second is the column number. A comma always separates these values. If there is no value before or after the comma, R assumes that you want all the available values. E.g. iris_data[,] means "get the values across all rows and columns". Read the documentation for the ``dplyr`` package, as there are so many cool functions to make your life easier!
+
+## ggplot
+### Using geom_point()
+
+geom_point() generates dot plots, like this:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+
+ggplot2::ggplot(data = iris_data, aes(x=sepal_length, y=petal_length, 
+                                      fill=species)) +
+  geom_point(shape = 21) +
+  scale_fill_manual(values = c("yellow", "lightblue", "red")) +
+  xlab("Sepal length (cm)") +
+  ylab("Petal length (cm)") +
+  theme_classic() 
+
+# Let's add trendlines
+ggplot2::ggplot(data = iris_data, aes(x=sepal_length, y=petal_length, 
+                                      fill=species)) +
+geom_point(shape = 21) +
+  scale_fill_manual(values = c("yellow", "lightblue", "red")) +
+  xlab("Sepal length (cm)") +
+  ylab("Petal length (cm)") +
+  theme_classic() +
+  stat_smooth(method = "lm", formula = y~x, geom = "smooth", 
+              alpha = 0.2, color = "black", linewidth = 0.4, se = TRUE)
+
+```
+
+Perhaps we want to create box plots for the three species, showing an overall summary. Below, we can use **stat_summary()** to add points for the mean values for each species. We can either set the colours ourselves for each species using **scale_fill_manual()**, or we can use default colour palettes in R, using **scale_fill_brewer()**:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+ggplot2::ggplot(data = iris_data, aes(x = species, y=petal_length, 
+                                      fill=species)) +
+  geom_boxplot(alpha = 0.5) +
+  scale_fill_brewer(palette="Set1") +
+ # scale_fill_manual(values = c("yellow", "lightblue", "red")) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, fill="black") +
+  theme(legend.position="none") +
+  xlab("Species") +
+  ylab("Petal length (cm)") +
+  theme_classic() +
+  coord_flip()
+```
+
+Explore the different **geom** options in the ggplot package - there are quite a few! Perhaps we want to change our boxplots above into violin or dot plots. This is easy, as we can use the same code as above, but just change **geom_box()** into **geom_violin()**:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+ggplot2::ggplot(data = iris_data, aes(x = species, y=petal_length, 
+                                      fill=species)) +
+  geom_violin(alpha = 0.5) +
+  scale_fill_brewer(palette="Set1") +
+ # scale_fill_manual(values = c("yellow", "lightblue", "red")) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, fill="black") +
+  theme(legend.position="none") +
+  xlab("Species") +
+  ylab("Petal length (cm)") +
+  theme_classic() +
+  coord_flip()
+```
+
+Or dots:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+ggplot2::ggplot(data = iris_data, aes(x = species, y=petal_length, 
+                                      fill=species)) +
+  geom_dotplot(binaxis = "y", stackdir = "center") +
+  scale_fill_brewer(palette="Set1") +
+ # scale_fill_manual(values = c("yellow", "lightblue", "red")) +
+  theme(legend.position="none") +
+  xlab("Species") +
+  ylab("Petal length (cm)") +
+  theme_classic() 
+```
+
+
+Here, we create a subset for each *Iris* species, using the **filter()** function in the **dplyr** package:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+setosa = dplyr::filter(iris_data, species=="setosa")
+versicolor = dplyr::filter(iris_data, species=="versicolor")
+virginica = dplyr::filter(iris_data, species=="virginica")
+```
+
+Now we can run a quick correlation test to see if there is a significant correlation between sepal and petal length in *I. versicolor*:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+cor.test(versicolor$sepal_length, versicolor$petal_length, method = "pearson")
+```
+
+Here we see a significant correlation (p < 0.05), with a correlation coefficient of r = 0.75. Typically, a value greater than 0.7 is considered to be strong. 
+
+Let's plot only *I. versicolor*, using **dplyr::filter()**:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+
+ggplot2::ggplot(data = versicolor, 
+                aes(x=sepal_length, y=petal_length)) +
+  geom_point(shape = 21, fill = "lightblue") +
+  xlab("Sepal length (cm)") +
+  ylab("Petal length (cm)") +
+  theme_classic()
+
+```
+
+Let's run a quick linear model, where we check whether there is a relationship between petal and sepal length:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+versicolor_lm = lm(data = versicolor, petal_length~sepal_length)
+summary(versicolor_lm)
+```
+If we plot the trend line for this linear regression, the intercept = 0.19, and the gradient = 0.69. The R^2 value is 0.56 (p < 0.05). Let's add this line to our dot plot, with a confidence interval band:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+
+ggplot2::ggplot(data = versicolor, 
+                aes(x=sepal_length, y=petal_length)) +
+  geom_point(shape = 21, fill = "lightblue") +
+  xlab("Sepal length (cm)") +
+  ylab("Petal length (cm)") +
+  theme_classic() +
+  stat_smooth(method = "lm", formula = y~x, geom = "smooth", 
+              alpha = 0.2, color = "black", linewidth = 0.4, se = TRUE)
+# set se = FALSE to remove the confidence interval band
+```
+
+We can also add this line using the **geom_abline()** function:
+
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+
+coeff = coefficients(versicolor_lm)
+intercept = coeff[1]
+gradient = coeff[2]
+
+ggplot2::ggplot(data = versicolor, 
+                aes(x=sepal_length, y=petal_length)) +
+  geom_point(shape = 21, fill = "lightblue") +
+  # add the abline
+  geom_abline(intercept = intercept, slope = gradient, linewidth = 0.5, 
+              color = "red", linetype = "dashed") +
+  xlab("Sepal length (cm)") +
+  ylab("Petal length (cm)") +
+  theme_classic() +
+  # the stat_regline_equation() function in the ggpubr package 
+  # adds the equation as text to the plot
+  ggpubr::stat_regline_equation(label.y = 6, aes(label = after_stat(c(eq.label))) ) +
+  # the stat_regline_equation() function in the ggpubr package adds the 
+  # R-squared value as text to the plot
+  ggpubr::stat_regline_equation(label.y = 5.8, label.x = 6.5, 
+                                aes(label = after_stat(c(rr.label))) ) 
+
+```
+
+Add facet_wrap() to separate the plots by species:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+
+ggplot2::ggplot(data = iris_data, aes(x=sepal_length, y=petal_length, fill=species)) +
+  geom_point(shape = 21) +
+  scale_fill_manual(values = c("yellow", "lightblue", "red")) +
+  xlab("Sepal length (cm)") +
+  ylab("Petal length (cm)") +
+  theme_bw() +
+  facet_wrap(~species) +
+  guides(fill=guide_legend(title="Species")) +
+  scale_fill_discrete(labels=c(expression(italic('Setosa')), 'Versicolor', "Virginica")) +
+  ggpubr::stat_regline_equation(label.y = 6.5, size = 2.5, 
+                                aes(label = after_stat(c(eq.label))) ) +
+  ggpubr::stat_regline_equation(label.y = 6.25,
+                                aes(label = after_stat(c(rr.label))) ) 
+
+```
+
+### Using geom_boxplot()
+
+The **geom_boxplot()** function creates box-and-whisker summary plots for your data:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+ggplot2::ggplot(data = iris_data, aes(x=species, y=petal_length, color=species)) +
+  geom_boxplot() +
+  scale_color_manual(values = c("forestgreen", "blue", "red")) +
+  xlab("Iris species") +
+  ylab("Petal length (cm)") +
+  theme_bw() +
+  theme(legend.position="none") +
+  # add points to denote means
+  stat_summary(fun = "mean", colour = "black", shape = 4)
+```
+
+### Using geom_violin()
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+ggplot2::ggplot(data = iris_data, aes(x=species, y=petal_length, fill=species)) +
+  geom_violin(alpha=0.5) +
+  geom_dotplot(binaxis= "y",
+               stackdir = "center",
+               dotsize = 0.5) +
+  scale_fill_manual(values = c("forestgreen", "blue", "red")) +
+  xlab("Iris species") +
+  ylab("Petal length (cm)") +
+  theme_bw() +
+  theme(legend.position="none")
+```
+
+### Using geom_histogram()
+
+Use **geom_histogram** to generate histogram plots. Set an appropriate bin value:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+ggplot2::ggplot(data = iris_data, aes(x=petal_length, fill=species)) +
+  geom_histogram(bins = 35) +
+  scale_fill_manual(values = c("forestgreen", "blue", "red")) +
+  xlab("Petal length (cm)") +
+  ylab("Count") +
+  theme_bw()
+```
+
+Use facet_wrap() here:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+ggplot2::ggplot(data = iris_data, aes(x=petal_length, fill=species)) +
+  geom_histogram(bins = 35) +
+  scale_fill_manual(values = c("forestgreen", "blue", "red")) +
+  xlab("Petal length (cm)") +
+  ylab("Count") +
+  theme_bw() +
+  facet_wrap(~species)
+```
+
+### Saving your plots as .PNG, .JPG, .PDF, or .SVG
+
+To save a plot, first assign it a name. We will call the last plot we made **petal_length_hist**:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+petal_length_hist = ggplot2::ggplot(data = iris_data, 
+                                    aes(x=petal_length, fill=species)) +
+  geom_histogram(bins = 35) +
+  scale_fill_manual(values = c("forestgreen", "blue", "red")) +
+  xlab("Petal length (cm)") +
+  ylab("Count") +
+  theme_bw() +
+  facet_wrap(~species)
+```
+
+Now we can use the ggsave() function to save it in any format we like. Play around with the dimensions to get an ideal size:
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+# save as PNG
+ggplot2::ggsave("outputs/petal_length.png", plot = petal_length_hist, 
+                dpi = 350, width = 8, height = 4)
+# save as PDF
+ggplot2::ggsave("outputs/petal_length.pdf", plot = petal_length_hist, 
+                dpi = 350, width = 8, height = 4)
+# save as JPG
+ggplot2::ggsave("outputs/petal_length.jpg", plot = petal_length_hist, 
+                dpi = 350, width = 8, height = 4)
+```

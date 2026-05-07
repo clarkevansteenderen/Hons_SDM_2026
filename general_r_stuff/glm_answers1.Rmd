@@ -1,0 +1,262 @@
+---
+title: "GLM_exercise"
+author: "Clarke van Steenderen"
+date: "2025"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Practice exercise 1
+
+The data set **pollinator_abundance_data.csv** contains pollinator abundances on three different flower species, across three seasons (summer, autumn, and winter).
+
+Run the appropriate GLM on this data, and have a look at whether:
+
+1.  abundance differs across the three flower hosts\
+2.  abundance differs across seasons\
+3.  season affects abundance differently across the three flower species
+
+Additionally, answer the following:
+
+a.  What is the response variable?\
+b.  What is the predictor variable?\
+c.  Do we need to include an interaction term in this model?\
+d.  Which GLM family was appropriate for this data? Provide the relevant model diagnostic plots.\
+e.  Provide box-and-whisker plots to graphically present the data
+
+# Answers
+
+a.  The response variable is `pollinator_abundance`. This is the variable we are focusing on.\
+b.  The predictor variables are `flower_sp` and `season`. We want to see how these predictors change our response variable.\
+c. Yes, as we want to see whether `season` affects `pollinator_abundance` differently on different `flower_sp`. If we do not include an interaction term, our model will assume that `pollinator_abundance` changes with the same magnitude across the different `flower_sp` over different seasons.\
+d. Since we are dealing with count data, the best approaches are the **poisson** or **negative binomial** GLM families, depending on the degree of overdispersion.
+
+Let's begin:
+
+```{r, message = FALSE}
+if (!require("pacman"))
+  install.packages("pacman")
+pacman::p_load(xlsx, janitor, ggplot2, Rmisc, dplyr, 
+               tidyverse, visreg, glmmTMB, gtsummary, effects, ggeffects,
+               patchwork, emmeans)
+
+# Set plot theme
+theme_set(theme_classic() +
+theme(panel.border = element_rect(colour = "black", fill = NA),
+axis.text = element_text(colour = "black"),
+axis.title.x = element_text(margin = unit(c(2, 0, 0, 0), "mm")),
+axis.title.y = element_text(margin = unit(c(0, 4, 0, 0), "mm")),
+legend.position = "none"))
+```
+
+Read in the data, and reorder the season levels:
+
+```{r}
+pollinator.data = read.csv("data/pollinator_abundance_data.csv") %>%
+  janitor::clean_names()
+
+# relevel order of seasons
+pollinator.data$season = factor(pollinator.data$season, 
+                                levels = c("Summer", "Autumn", "Winter"))
+
+```
+
+We are working with count data here, and so we will need to fit a Poisson or negative binomial GLM. Let's start by running an ANOVA (Gaussian GLM), just to see how poorly the model fits the data:
+
+```{r}
+pollinator.glm.gaus = glm(pollinator_abundance ~ flower_sp + 
+                            season + flower_sp:season, data = pollinator.data)
+
+DHARMa::simulateResiduals(pollinator.glm.gaus, plot = TRUE)
+```
+
+Now we'll try a Poisson model:
+
+```{r}
+
+pollinator.glm.pois = glm(pollinator_abundance ~ flower_sp + 
+                          season + flower_sp:season, family = "poisson",
+                          data = pollinator.data)
+
+DHARMa::simulateResiduals(pollinator.glm.pois, plot = TRUE)
+
+DHARMa::testZeroInflation(pollinator.glm.pois)
+```
+
+The boxplots look better than the Gaussian model, but the QQ plot shows that the points are not falling along the y = x line, that the KS test is significant, that there is significant overdispersion and outliers.
+
+Let's fit a negative binomial model, to account for overdispersion:
+
+```{r}
+
+# fit a model with just one predictor: flower species
+pollinator.glm.negbin.1 = glmmTMB::glmmTMB(pollinator_abundance ~ flower_sp,
+                          family = nbinom2(link = "log"),
+                          data = pollinator.data)
+
+# fit another model with both flower species and season
+pollinator.glm.negbin.2 = glmmTMB::glmmTMB(pollinator_abundance ~ flower_sp + season,
+                          family = nbinom2(link = "log"),
+                          data = pollinator.data)
+
+# check which model is better -> the model with both predictors is best
+anova(pollinator.glm.negbin.1, pollinator.glm.negbin.2, test = "Chisq")
+
+# fit a model with both predictors, and an interaction term
+pollinator.glm.negbin.3 = glmmTMB::glmmTMB(pollinator_abundance ~ flower_sp + 
+                          season + flower_sp:season,
+                          family = nbinom2(link = "log"),
+                          data = pollinator.data)
+
+# check whether the interaction term improved the model fit -> yes
+anova(pollinator.glm.negbin.2, pollinator.glm.negbin.3, test = "Chisq")
+
+# let's get the model diagnostics for model 3
+DHARMa::simulateResiduals(pollinator.glm.negbin.3, plot = TRUE)
+DHARMa::testZeroInflation(pollinator.glm.negbin.3)
+```
+
+This model fits very well. Let's have a look at the significance of our predictor variables, by using a likelihood ratio test (LRT):
+
+```{r}
+car::Anova(pollinator.glm.negbin.3, test = "Chisq", type = "III")
+
+# let's get some averages for flower species
+Rmisc::summarySE(data = pollinator.data, measurevar = "pollinator_abundance",
+                 groupvars = c("flower_sp"))
+
+# let's get some averages for season
+Rmisc::summarySE(data = pollinator.data, measurevar = "pollinator_abundance",
+                 groupvars = c("season"))
+
+Rmisc::summarySE(data = pollinator.data, measurevar = "pollinator_abundance",
+                 groupvars = c("flower_sp"))
+
+# let's get some averages for everything
+pollinator.summary = Rmisc::summarySE(data = pollinator.data, 
+                 measurevar = "pollinator_abundance",
+                 groupvars = c("flower_sp", "season"))
+
+```
+
+Let's make some box plots:
+
+```{r}
+
+# plot flower species
+ggplot2::ggplot(data = pollinator.data, 
+                aes(x = flower_sp, y = pollinator_abundance)) +
+  geom_boxplot(fill = c("red", "green", "blue"), alpha = 0.5) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, fill="black") +
+  xlab("Flower species") + 
+  ylab("Pollinator abundance")
+
+# plot seasons
+ggplot2::ggplot(data = pollinator.data, 
+                aes(x = season, y = pollinator_abundance)) +
+  geom_boxplot(fill = c("yellow", "darkorange", "brown"), alpha = 0.5) +
+  stat_summary(fun = mean, geom = "point", shape = 18, size = 5, fill="black") +
+  xlab("Season") + 
+  ylab("Pollinator abundance")
+
+# plot all
+ggplot2::ggplot(data = pollinator.data, 
+                aes(x = flower_sp, y = pollinator_abundance, 
+                    fill = season)) +
+  geom_boxplot(alpha = 0.5) +
+  scale_fill_manual(values = c("yellow", "darkorange", "brown")) +
+  theme(legend.position = "right") +
+  xlab("Flower species") + 
+  ylab("Pollinator abundance")
+```
+
+```{r}
+# run some post hoc tests to see differences between groups
+posthoc.season = emmeans::emmeans(pollinator.glm.negbin.3, 
+                                      pairwise ~ season,
+                                      adjust = "tukey")
+
+posthoc.flower = emmeans::emmeans(pollinator.glm.negbin.3, 
+                                      pairwise ~ flower_sp,
+                                      adjust = "tukey")
+
+posthoc.season$contrasts %>%
+  summary(infer = TRUE)
+
+posthoc.flower$contrasts %>%
+  summary(infer = TRUE)
+```
+
+We can also create boxplots showing means, and standard deviations by using the `geom_errorbar()` function in ggplot. Note how you can modify the axis labels and legend title, and how you can group a bar plot by different factors using `facet_wrap()`.
+
+```{r}
+
+# OVERALL PLOT
+ggplot2::ggplot(data = pollinator.summary, 
+                aes(x = flower_sp, y = pollinator_abundance, fill = season)) +
+  geom_bar(stat = "identity", position = position_dodge(), 
+           alpha = 0.65, colour = "black") +
+  geom_errorbar(aes(ymin = pollinator_abundance - sd, 
+                    ymax = pollinator_abundance + sd), 
+                position = position_dodge(width = 0.90), width = 0.25) +
+  scale_fill_manual(values = c("yellow", "darkorange", "brown")) +
+  theme(legend.position = "right") +
+  labs(x = "Flower species", y = "Pollinator abundance", fill = "Season") +
+  scale_x_discrete(labels = c("flower_sp1" = "Flower Species 1",
+                               "flower_sp2" = "Flower Species 2",
+                               "flower_sp3" = "Flower Species 3")) 
+
+# GROUP BY SEASON
+ggplot2::ggplot(data = pollinator.summary, 
+                aes(x = flower_sp, y = pollinator_abundance, fill = season)) +
+  geom_bar(stat = "identity", position = position_dodge(), 
+           alpha = 0.65, colour = "black") +
+  geom_errorbar(aes(ymin = pollinator_abundance - sd, 
+                    ymax = pollinator_abundance + sd), 
+                position = position_dodge(width = 0.90), width = 0.25) +
+  scale_fill_manual(values = c("yellow", "darkorange", "brown")) +
+  theme(legend.position = "right") +
+  labs(x = "Flower species", y = "Pollinator abundance", fill = "Season") +
+  scale_x_discrete(labels = c("flower_sp1" = "Flower Species 1",
+                               "flower_sp2" = "Flower Species 2",
+                               "flower_sp3" = "Flower Species 3")) +
+  # rotate x axis labels 45 degrees
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  facet_wrap(~season)
+
+# GROUP BY FLOWER SPECIES
+ggplot2::ggplot(data = pollinator.summary, 
+                aes(x = season, y = pollinator_abundance, fill = flower_sp)) +
+  geom_bar(stat = "identity", position = position_dodge(), 
+           alpha = 0.65, colour = "black") +
+  geom_errorbar(aes(ymin = pollinator_abundance - sd, 
+                    ymax = pollinator_abundance + sd), 
+                position = position_dodge(width = 0.90), width = 0.25) +
+  theme(legend.position = "right") +
+  labs(x = "Season", y = "Pollinator abundance", fill = "Flower species") +
+  scale_fill_manual(values = c("forestgreen", "gold", "darkred"),
+                    labels = c("Flower Species 1", "Flower Species 2", 
+                               "Flower Species 3")) +
+  # rotate x axis labels 45 degrees
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  facet_wrap(~flower_sp,
+             labeller = labeller(flower_sp = c("flower_sp1" = "Flower Species 1",
+                                               "flower_sp2" = "Flower Species 2",
+                                               "flower_sp3" = "Flower Species 3")))
+
+# look at our summary 
+pollinator.summary
+```
+
+We can thus report that:
+
+There was a significant difference in pollinator abundance recorded on the three flower species (LRT: $\chi^2$ = 440.97, d.f. = 2, p \< 0.001), and a significant difference across seasons (LRT: $\chi^2$ = 179.53, d.f. = 2, p \< 0.001). Additionally, seasonality had a significant effect on the abundance of pollinators across the three different flower species (LRT: $\chi^2$ = 235.54, d.f. = 4, p \< 0.001).
+
+If we have a look at a boxplot, combined with our summary table, we can also add that:
+
+-   Pollinator abundance was highest on flower sp. 3 (28.4 $\pm$ 19.7), and lowest on flower sp. 1 (10.1 $\pm$ 6.8)
+-   Pollinator abundance was highest in summer (28.5 $\pm$ 20.9), and lowest in winter (9.1 $\pm$ 5.9), such that winter abundance was 68% lower: (9.1 - 28.5)/(28.5) x 100
+-   For flower sp. 1, pollinator abundance was highest in autumn, while abundances were highest in summer for flower sp. 2 and sp. 3

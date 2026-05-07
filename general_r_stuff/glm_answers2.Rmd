@@ -1,0 +1,174 @@
+---
+title: "GLM_exercise_2"
+author: "Clarke van Steenderen"
+date: "2025"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Practice exercise 2
+
+```{r, message = FALSE}
+if (!require("pacman"))
+  install.packages("pacman")
+pacman::p_load(xlsx, janitor, ggplot2, Rmisc, dplyr, 
+               tidyverse, visreg, glmmTMB, gtsummary, effects, ggeffects,
+               patchwork, emmeans, GLMsData)
+
+# Set plot theme
+theme_set(theme_classic() +
+theme(panel.border = element_rect(colour = "black", fill = NA),
+axis.text = element_text(colour = "black"),
+axis.title.x = element_text(margin = unit(c(2, 0, 0, 0), "mm")),
+axis.title.y = element_text(margin = unit(c(0, 4, 0, 0), "mm")),
+legend.position = "none"))
+```
+
+Read in the data collected in the 1970s on the smoking habits of 654 youths. Female = 0, male = 1, non-smoker = 0, smoker = 1, FEV = Forced Expiratory Volume (lung capacity). It seems weird that smokers appear to have a higher lung capacity than non-smokers! Split the plots so that they account for age and height:
+
+```{r}
+library(GLMsData)
+data(lungcap)
+
+str(lungcap)
+lungcap$Smoke = as.factor(lungcap$Smoke)
+
+# Plot FEV for smokers and non-smokers
+ggplot2::ggplot(data = lungcap, aes(x = Smoke, y = FEV)) +
+  geom_boxplot() +
+  facet_wrap(~Gender) +
+  scale_x_discrete(labels = c("0" = "Non-smoker",
+                               "1" = "Smoker")) 
+
+# Plot FEV for smokers and non-smokers
+ggplot2::ggplot(data = lungcap, aes(x = Smoke, y = FEV)) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 0.5, alpha = 0.5) +
+  scale_x_discrete(labels = c("0" = "Non-smoker",
+                               "1" = "Smoker")) 
+
+# Another presentation
+ggplot2::ggplot(data = lungcap, aes(x = Smoke, y = FEV)) +
+  geom_jitter(alpha = 0.5) 
+
+# look at age
+ggplot2::ggplot(data = lungcap, aes(x = Gender, y = Age)) +
+  geom_boxplot() +
+  facet_wrap(~Smoke, 
+             labeller = labeller(Smoke = c("0" = "Non-smoker", "1" = "Smoker"))) +
+  scale_x_discrete(labels = c("0" = "Female", "1" = "Male")) 
+
+# Plot FEV, taking age into account: LM lines
+ggplot2::ggplot(data = lungcap, aes(x = Age, y = FEV, colour = factor(Smoke))) +
+  geom_point() +
+  scale_colour_manual(values = c("darkgrey", "darkred")) +
+  geom_smooth(data = subset(lungcap, Smoke == 0), aes(group = 1), 
+              method = "lm", linewidth = 1, col = "darkgrey", se = FALSE) +
+  geom_smooth(data = subset(lungcap, Smoke == 1), aes(group = 1), 
+              method = "lm", linewidth = 1, col = "darkred", se = FALSE) +
+  facet_wrap(~Gender)
+
+# Plot FEV, taking age into account: loess lines
+ggplot2::ggplot(data = lungcap, aes(x = Age, y = FEV, colour = factor(Smoke))) +
+  geom_point() +
+  scale_colour_manual(values = c("darkgrey", "darkred")) +
+  geom_smooth(data = subset(lungcap, Smoke == 0), aes(group = 1), 
+              method = "loess", linewidth = 1, col = "darkgrey", se = FALSE) +
+  geom_smooth(data = subset(lungcap, Smoke == 1), aes(group = 1), 
+              method = "loess", linewidth = 1, col = "darkred", se = FALSE) +
+  facet_wrap(~Gender)
+
+# Plot FEV taking height into account: LM lines
+ggplot2::ggplot(data = lungcap, aes(x = Ht, y = FEV, colour = factor(Smoke))) +
+  geom_point() +
+  scale_colour_manual(values = c("darkgrey", "darkred")) +
+  geom_smooth(data = subset(lungcap, Smoke == 0), aes(group = 1), 
+              method = "lm", linewidth = 1, col = "darkgrey", se = FALSE) +
+  geom_smooth(data = subset(lungcap, Smoke == 1), aes(group = 1), 
+              method = "lm", linewidth = 1, col = "darkred", se = FALSE) +
+  facet_wrap(~Gender)
+
+# Plot FEV taking height into account: loess lines
+ggplot2::ggplot(data = lungcap, aes(x = Ht, y = FEV, colour = factor(Smoke))) +
+  geom_point() +
+  scale_colour_manual(values = c("darkgrey", "darkred")) +
+  geom_smooth(data = subset(lungcap, Smoke == 0), aes(group = 1), 
+              method = "loess", linewidth = 1, col = "darkgrey", se = FALSE) +
+  geom_smooth(data = subset(lungcap, Smoke == 1), aes(group = 1), 
+              method = "loess", linewidth = 1, col = "darkred", se = FALSE) +
+  facet_wrap(~Gender)
+
+```
+
+Let's fit a few models:
+
+```{r}
+lung.glm.gaus.1 = glm(FEV ~ Smoke, data = lungcap, family = gaussian)
+lung.glm.gaus.2 = glm(FEV ~ Smoke + Gender, data = lungcap, family = gaussian)
+lung.glm.gaus.3 = glm(FEV ~ Smoke + Gender + Smoke:Gender, 
+                      data = lungcap, family = gaussian)
+
+# model 2 is better than 1 -> including gender is NB
+anova(lung.glm.gaus.1, lung.glm.gaus.2, test = "Chisq")
+
+# model 3 is not particularly better than model 2 -> the interaction term
+# is not that important
+anova(lung.glm.gaus.2, lung.glm.gaus.3, test = "Chisq")
+
+lung.glm.gaus.4 = glm(FEV ~ Smoke + Gender + Age, 
+                      data = lungcap, family = gaussian)
+
+# model 4 is better than model 2 -> age is also important
+anova(lung.glm.gaus.2, lung.glm.gaus.4, test = "Chisq")
+
+# add the interaction term between smoking and age
+lung.glm.gaus.5 = glm(FEV ~ Smoke + Gender + Age + Smoke:Age, 
+                      data = lungcap, family = gaussian)
+
+# model 5 is better than model 4 -> interaction between smoking and age is NB
+anova(lung.glm.gaus.4, lung.glm.gaus.5, test = "Chisq")
+
+# add an interaction term between smoking, gender, and age
+lung.glm.gaus.6 = glm(FEV ~ Smoke + Gender + Age + Smoke*Gender*Age, 
+                      data = lungcap, family = gaussian)
+
+# model 6 is better than model 5
+# adding the interaction between all three variables makes for a better model
+anova(lung.glm.gaus.5, lung.glm.gaus.6, test = "Chisq")
+
+# check model diagnostics
+DHARMa::simulateResiduals(lung.glm.gaus.6, plot = TRUE)
+
+car::Anova(lung.glm.gaus.6, test = "LR", type = "III")
+summary(lung.glm.gaus.6)
+
+Rmisc::summarySE(data = lungcap, measurevar = "FEV", 
+                 groupvars = c("Gender", "Smoke"))
+
+```
+
+The summary output suggests that:
+
+* The intercept (FEV) is 0.67 when all predictors are zero (age = 0, non-smoker, and female)
+
+* Smoking (smoker = 1, non-smoker = 0) increases FEV by 2.41 units, compared to a non-smoker (holding all other variables constant)... weird! But, we haven't accounted for age, gender, or height yet, which comes in with the interaction terms
+
+* Gender affects FEV, where FEV is 0.73 units less in males than in females (holding all other variables constant)
+
+* Age affects FEV, where a one year increase in age increases FEV by 0.18 units (holding all other variables constant)
+
+**Interactions**:
+
+* The effect of smoking on FEV differs between males and females, where FEV is 0.59 units less in male compared to female smokers. This isn't significant, however.
+
+* The effect of smoking on FEV differs across ages, where FEV decreases by 0.19 units with every year increase in age [in smokers], compared to non-smokers
+
+* The effect of gender on FEV differs across ages, where FEV increases by 0.11 units more in males than females with every year increase in age
+
+* There is a three-way interaction, suggesting that the effect of smoking on FEV differs between genders, and varies between ages, but this is not significant
+
+Note the sample sizes in this data -> how might this affect our interpretation? There is a lot more data for non-smokers.
+
+We also don't know what the baseline lung capacity was for participants - there might have been some people with a genetic predisposition for a larger capacity, or maybe some people were physically a lot larger than others. These variables have not been accounted for. Aside from smoking or not, we don't know what the unit of measurement was: some people might smoke two packets a day, while others smoke only one or two cigarettes per day. There might also be differences in other underlying health issues that could skew the results; perhaps some people have asthma or other lung-related illnesses, which also is not accounted for.

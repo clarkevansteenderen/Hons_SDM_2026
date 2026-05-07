@@ -1,0 +1,774 @@
+---
+title: "Basic GLMs in R"
+author: "Clarke van Steenderen"
+date: "2025-02"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+```
+
+# **R tutorial 5: Running Generalised Linear Models (GLMs)**
+
+A GLM is a more versatile version of a linear regression model. It accepts a wider variety of response variable types, such as count and binary data. This is often useful when a data set does not meet the expected statistical assumptions required in the linear modelling process (i.e. Gaussian expectations). When applying linear models, one assumes that the error terms have a normal distribution (i.e. there is a constant relationship between mean and variance). GLMs, however, can be applied when error structures are non-normal.
+
+Data types are numerous, where you will typically have one or more of the following:
+
+-   Continuous -\> e.g. measurements of height, mass, length, temperature
+-   Count -\> e.g. number of species
+-   Proportion -\> e.g. the proportion of a population that shares a morphological feature
+-   Binary -\> e.g. dead or alive, male or female, healthy or sick
+-   Categorical/factors -\> e.g. different groups, such as a control and drug treatments
+
+Here is a general guide to choosing which statistical test may be best suited for your data. Have a look at [Dai Shizuka's site](https://dshizuka.github.io/RCourse/05.1.Stats_LinearModels.html) for additional examples. If you have:
+
+-   A continuous predictor AND continuous response variable -\> use linear regression or a GLM with **Gaussian** distribution
+-   A continuous predictor AND binary response variable -\> GLM with the **"binomial"** family (logistic regression)
+-   A continuous predictor AND counts as response variable -\> GLM with **"Poisson"** or **"Negative binomial"** family (Poisson regression)
+-   A continuous predictor AND proportions as response variable -\> GLM with **"binomial"** family
+-   A categorical predictor AND continuous response variable -\> **ANOVA** (or t-test, if you are just comparing means), which can be also be run as a linear model or GLM. An ANOVA is essentially a LM or a GLM, just with a categorical predictor variable. An ANOVA compares means across groups, and looks at the variance between and within groups. If variance is greater between than within those groups, there is a significant difference between them.
+-   A categorical predictor AND counts as response variable -\> GLM with **"Poisson"** or **"Negative binomial"** family (Poisson regression)
+-   Multiple predictors, with some continuous and some categorical variables -\> linear regression / GLM
+-   If you have a continuous response variable (irrespective of predictor type) that is only ever positive and right-skewed, a Gamma distribution is appropriate (e.g ```family = Gamma(link = "log")```). Such values could be survival times, time to failure, reaction times, concentrations, body size, biomass, etc. Plot the distribution of the raw data to check for skewness. A positive skew has a long positive tail.
+- If you have a proportion/percentage/rate as a response variable (e.g. proportion of eggs that hatched, percentage vegetation cover, birth rate, metabolic or infection rate), a Beta distribution is appropriate. This takes in proportion values strictly between 0 and 1. The GLM function does not run a "beta" family, and so you need to use the ```betareg() function in the betareg library```. If you wanted to convert your proportions to counts of success vs failure or presence vs absence, assuming only two states, you could use a binomial GLM. If there are more than two categories, you could use something like a multinomial regression model (```nnet::multinom()```).
+
+**NOTE: offsets**
+Sometimes we may have an additional factor in our data that isn't an actual parameter, but may need to be used to scale the data. For example, we might have measured the occurrence of a disease across different populations, but the population sizes and ages vary. Intuitively, larger populations will have a higher incidence of the disease and would appear to be more sickly than smaller populations; just because there is more data. Similarly, there may be differences in the age structures across the populations, where older people are more likely to become ill than younger people. In order to correct for population size and age, we can add the ```offset``` parameter to our GLMs, where we provide these correction variables. Another example might be a dataset containing species counts across different habitat types. One habitat might have five pitfall traps, while another had ten (or perhaps different amounts of time were spent at different sites). The sampling effort is therefore not consistent across all measures. This would then need to be accounted for as an offset in the model. An example of how this might be run in R with a Poisson GLM could be:
+
+``` glm(abundance ~ habitat + offset(log(observation_time) + log(trap_number)), family = poisson, data = my_data) ``` 
+
+**NOTE: sum-of-squares tests**
+A sum-of-squares test is applied when testing for the significance of your parameters. Generally, you would use a:
+
+-   Type I test when there is one predictor variable\
+-   Type II test when there are two or more predictor variables AND NO interaction terms\
+-   Type III test when there are two or more predictor variables AND an interaction term
+
+The default **anova()** function in R runs a type I test, while the **car::Anova()** function can run type II and type III tests. If the interaction term in a type III test is not significant, re-run the test using type II to check the significance of the two predictor variables.
+
+Let's set up our R session:
+
+```{r, message = FALSE}
+if (!require("pacman"))
+  install.packages("pacman")
+pacman::p_load(xlsx, janitor, ggplot2, Rmisc, dplyr, 
+               tidyverse, visreg, glmmTMB, gtsummary, effects, ggeffects,
+               patchwork, e1071, tidyr)
+
+# Set plot theme
+theme_set(theme_classic() +
+theme(panel.border = element_rect(colour = "black", fill = NA),
+axis.text = element_text(colour = "black"),
+axis.title.x = element_text(margin = unit(c(2, 0, 0, 0), "mm")),
+axis.title.y = element_text(margin = unit(c(0, 4, 0, 0), "mm")),
+legend.position = "none"))
+
+```
+
+# **A basic GLM -\> growth rates across groups**
+
+## **GAUSSIAN**
+
+Running this Gaussian GLM is essentially the same as a standard ANOVA or linear model. Here is a data set with growth rates (continuous variable) of different *Daphnia* species in the presence of different parasites (i.e. categories). This data comes from the book *Getting Started with R: An Introduction for Biologists* by Andrew Beckerman et al. 2017. We'll fit a Gaussian GLM here. Run a standard linear model and ANOVA for yourself as well, and compare the output.
+
+```{r, message = FALSE}
+daphnia.data = read.csv("data/datasets_getting_started/Daphniagrowth.csv")
+str(daphnia.data)
+
+# Plot growth rate against parasite
+ggplot2::ggplot(data = daphnia.data, 
+                aes(x = parasite, y = growth.rate, colour = parasite)) +
+  geom_boxplot() +
+  coord_flip() +
+  xlab("Parasite") + 
+  ylab("Growth rate")
+
+hist(daphnia.data$growth.rate)
+# indicates a slight negative skew
+e1071::skewness(daphnia.data$growth.rate)
+
+# let's run a Gaussian GLM -> you could equally as easily run a linear model
+daphnia.glm.gaus = glm(data = daphnia.data,
+                              growth.rate ~ parasite,
+                              family = gaussian)
+
+# have a look at model diagnostics
+plot(daphnia.glm.gaus, which = 1)
+plot(daphnia.glm.gaus, which = 2)
+
+daphnia.resids = resid(daphnia.glm.gaus)
+hist(daphnia.resids)
+e1071::skewness(daphnia.resids)
+
+daphnia.resids.df = as.data.frame(daphnia.resids)
+
+daphnia.resids.mean = mean(daphnia.resids.df$daphnia.resids)
+
+ggplot2::ggplot(data = daphnia.resids.df, aes(y = daphnia.resids)) +
+  #geom_histogram() +
+  geom_density() +
+  coord_flip() + 
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray") +
+  geom_hline(yintercept = daphnia.resids.mean, linetype = "dashed", color = "darkred")
+
+DHARMa::plotQQunif(daphnia.glm.gaus)
+
+#performance::check_model(daphnia.glm.gaus, check = "normality")
+
+# we'll run a likelihood ratio test
+# here we see that parasite does have an effect on growth rate
+# Note that we are not running an ANOVA here, but rather producing a 
+# deviance table
+
+# use anova for type I
+anova(daphnia.glm.gaus, test = "LR")
+
+# get means
+daphnia.means = Rmisc::summarySE(daphnia.data, measurevar = "growth.rate",
+                                 groupvars = "parasite")
+
+# summary of the model
+# notice how the control group is not in the results table. This is because
+# it is represented by the Intercept, and the other parasites are compared
+# to that. The Intercept will be taken as the first level (i.e. alphabetically)
+# of your groups. 
+summary(daphnia.glm.gaus)
+
+# another neater way of viewing the summary results
+gtsummary::tbl_regression(daphnia.glm.gaus)
+
+# notice the four levels of parasites in the data: R orders them alphabetically
+# this is why the control (first in alphabetical order) is the reference
+# in the summary output
+levels(factor(daphnia.data$parasite))
+
+```
+
+If you wanted to change the order of the levels so that a different category becomes the baseline (other than "Control" in this dataset), you could use the ```factor()``` function and manually define the order of each. Perhaps you want *Pasteuria ramosa* to be first:
+
+```
+daphnia.data$parasite = factor(daphnia.data$parasite,
+   levels = c("Pasteuria ramosa", "control", "Metschnikowia bicuspidata", "Pansporella perplexa"))
+```
+
+Let's plot the mean growth rate for each treatment. The dotted line is at **x = 1.21391**, which is the mean of the control. See the Estimate values in the **summary(daphnia.glm.gaus)** output. When there is a single categorical predictor, the Intercept value is the mean of the reference variable (here, Control), and the Estimate values are the distances of the other variables from the reference mean. This changes when there are multiple predictors, or if the predictor is a continuous variable, so be careful. If we had an additional predictor, such as temperature, the Intercept value would be the growth rate of the control group when temperature = 0. If you wanted to change the reference temperature value to something other than zero, perhaps 1, you could add an additional column to the dataset, where you have temperature - 1. You would then use this centered temperature column as a predictor. This might take the form: ```glm(growth.rate ~ parasite + temperature_centered, family = gaussian, data = daphnia.data)```.
+
+Back to our model: the other negative values just indicate how far away each of the other parasites are away from the mean of the control treatment. For example, *M. bicuspidata* is -0.41275 away from the control -\> 1.21391 - 0.41275 = 0.80116, and this difference is significant (p \< 0.01). The horizontal black lines in the plot below show these distance differences from the control's mean value (dotted vertical line).
+
+```{r, message = FALSE}
+
+ggplot2::ggplot() +
+  geom_point(data = daphnia.data, shape = 16, 
+             aes(x = parasite, y = growth.rate, 
+                 colour = parasite, size = 8, alpha = 0.5)) +
+  geom_point(data = daphnia.means, aes(x = parasite, y = growth.rate, size = 8),
+             shape = 17) +
+  geom_hline(yintercept = 1.21391, linetype = "dashed") +
+  geom_segment(aes(y=1.21391, x=4, yend=0.4822030, xend=4), 
+               linewidth = 0.8, alpha = 0.5) +
+  geom_segment(aes(y=1.21391, x=3, yend=1.0763551, xend=3),
+               linewidth = 0.8, alpha = 0.5) +
+  geom_segment(aes(y=1.21391, x=2, yend=0.8011541, xend=2),
+               linewidth = 0.8, alpha = 0.5) +
+  scale_y_continuous(breaks=seq(0,2,by=0.1)) +
+  coord_flip() +
+  xlab("Parasite") + 
+  ylab("Growth rate")
+
+# run some post hoc tests to see differences between groups
+posthoc.daphnia = emmeans::emmeans(daphnia.glm.gaus, pairwise ~ parasite, adjust = "tukey")
+
+posthoc.daphnia$contrasts %>%
+  summary(infer = TRUE)
+```
+
+What can you conclude from these pairwise contrasts? Have a look at the plot again to check the comparison between *P. perplexa* and the control. Look at the signs of the estimate values. For example, the contrast between the control and *M. bicuspidata* is +0.413, with a p-value \< 0.001. This means that the control was significantly higher than the *M. bicuspidata* parasite. The *M. bicuspidata* - *P. perplexa* comparison was -0.275, which means that *M. bicuspidata* was significantly lower than *P. perplexa* (p \< 0.05).
+
+Let's run an ANOVA here to show that the output is the same as the GLM:
+
+```{r, message = FALSE}
+daphnia.aov = aov(growth.rate ~ parasite, data = daphnia.data)
+summary(daphnia.aov)
+```
+
+And a linear model:
+
+```{r, message = FALSE}
+daphnia.lm = lm(growth.rate ~ parasite, data = daphnia.data)
+summary(daphnia.lm)
+anova(daphnia.lm, test = "F")
+```
+
+# **GLM using binomial data: dead or alive**
+
+## **BINOMIAL**
+
+Let's have a look at a data set with morphological measurements (continuous) and survival statistics (binary: dead (0) or alive (1)) of North American song sparrows, as taken from [Schluter and Smith, 1986](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1986.tb00465.x). Let's start by fitting a linear model, just to see that it isn't appropriate for binary data!
+
+```{r, message = FALSE}
+
+sparrow.data = read.csv("data/songsparrow.csv")
+head(sparrow.data)
+
+# plot tarsus length vs survival
+# geom_jitter is an alternative to geom_point, but it presents the points
+# in a clearer way, especially if there is a lot of overlap
+ggplot2::ggplot(data = sparrow.data, aes(x = tarsus, y = survival)) +
+  geom_jitter(color = "firebrick", size = 3,
+              height = 0.04, width = 0, 
+              alpha = 0.5) +
+  # this adds a trendline
+  geom_smooth(method = "loess", linewidth = 1, col = "black", se = FALSE) +
+  xlab("Tarsus length (mm)") + 
+  ylab("Survival")
+
+```
+
+Would you agree that sparrows with shorter tarsi were favoured by natural selection?
+
+```{r, message = FALSE}
+# run a linear model
+sparrow.lm = lm(survival ~ tarsus, data = sparrow.data)
+
+# in this residual plot, there are three dashed lines: at the 0.25, 0.5, and 
+# 0.75 quantiles. We expect to see our solid lines closely following these
+# straight lines. You can see how the upper and lower red lines deviate quite
+# noticeably 
+DHARMa::plotResiduals(sparrow.lm)
+#plot(DHARMa::simulateResiduals(sparrow.lm))
+
+# Here we also see a significant deviation of the KS test (Kolmogorov-Smirnov).
+# The KS test is an indication of goodness of fit. At least there is not 
+# significant overdispersion or outliers in the data.
+DHARMa::plotQQunif(sparrow.lm)
+```
+
+We can see clearly that a linear model is inappropriate for this data, and that its output will be unreliable. Let's dive into a GLM for count data! We'll specify that we want to use the **binomial** family, since we are dealing with "dead" or "alive" data, in the form of a zero or one.
+
+```{r, message = FALSE}
+# Let's run a GLM where we look at the effect of tarsus length on survival
+sparrow.glm = glmmTMB::glmmTMB(survival ~ tarsus, 
+                  family = binomial(link = "logit"), 
+                  data = sparrow.data)
+
+# we can also run a null model -> assumes that the log-odds of survival is
+# consistent across all tarsal measurements (null hypothesis)
+sparrow.glm.null = glmmTMB::glmmTMB(survival ~ 1, 
+                  family = binomial(link = "logit"), 
+                  data = sparrow.data)
+
+# now we can compare the models
+# You can see that model 2, which includes
+# tarsus length, is a much better fit than the null model. This difference is
+# also significant, as p < 0.05. This just means that tarsal length is a 
+# significant predictor of survival
+anova(sparrow.glm.null, sparrow.glm, test = "Chisq")
+
+# Check the residuals and QQ plot
+DHARMa::plotResiduals(sparrow.glm)
+DHARMa::plotQQunif(sparrow.glm)
+
+# take a quick peek at the model
+visreg::visreg(sparrow.glm, xvar = "tarsus", 
+               scale = 'response', rug = FALSE, 
+               ylim = c(-.1, 1.1),
+               line.par = list(col = 'black'),
+               fill.par = list(col = 'lightblue'))
+points(jitter(survival, 0.1) ~ tarsus, 
+       data = sparrow.data, pch = 1, 
+       col = "firebrick", lwd = 1.5)
+
+# Let's plot this model using ggplot, for practice
+# First, we'll add a column to our sparrow.data -> containing predictions
+# These are probabilities of survival, based on our GLM
+sparrow.data$predictions = predict(sparrow.glm, type = "response")
+
+# Now let's plot in ggplot 
+sparrow.ggplot = ggplot(sparrow.data, aes(x = tarsus, y = predictions)) +
+  geom_point(aes(x = tarsus, y = survival), 
+             color = "firebrick", size = 3, alpha = 0.6) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"), 
+              se = TRUE, color = "black", fill = "lightgrey") +
+  labs(x = "Tarsus Length", y = "Predicted Survival Probability")
+
+```
+
+You can see what a difference there is to the QQ plot and residuals after applying the GLM! Let's have a closer look at the stats now. The Estimate value for the Intercept and response variable (here it is tarsus) are referred to as the beta coefficients.
+
+```{r, message = FALSE}
+
+# tarsus length has a significant effect on survival
+car::Anova(sparrow.glm, test = "Chisq", type = "II")
+
+summary(sparrow.glm)
+gtsummary::tbl_regression(sparrow.glm, exponentiate = TRUE)
+
+# get the exponential of the beta coefficient, since we ran a logistic
+# regression. Note that the sign was negative, which just tells us the 
+# direction of the effect. R gives the log-odds, we need to get it as an 
+# odds ratio
+odds.ratio = exp(-1.2578)
+
+# percentage
+odds.ratio.perc = (odds.ratio - 1)*100
+
+confint(sparrow.glm)
+
+# get the exponential of the confidence intervals. Note the negative signs 
+conf.int.lower = exp(-1.97)
+conf.int.upper = exp(-0.58)
+```
+
+Here we see that tarsus length has a significant effect on survival ($\chi^2$ = 13.4, d.f. = 1, p \< 0.001). The beta coefficient value of 0.28 (**exp(-1.2578)**) means that for every millimeter increase in tarsus length, the probability of survival decreases (due to the negative sign) by a factor of **0.28**. As a percentage, this is an approximate **72% reduction** in the odds ([0.28 - 1])\*100. The 95% confidence interval suggests that a tarsal length increase of 1 mm will result in a decreased odds of survival at a factor of between 0.14 and 0.56.
+
+Perhaps we want to find out what the probability of survival is for sparrows that have tarsal lengths of 30, 20.5, 15, and 14 mm:
+
+```{r, message = FALSE}
+predict(sparrow.glm, newdata = data.frame(tarsus = c(22, 20.5, 15, 14)), 
+        type = "response")
+```
+
+Run the same analysis on one or more of the other morphological measurements, and have a look what effect they have on survival.
+
+# **GLM using count data**
+
+## **POISSON AND NEGATIVE BINOMIAL**
+
+Let's have a look at a quick example of how a GLM can be used to analyse the relationship between the distance to a nuclear power plant (continuous predictor variable, in km), and the number of cases of cancer per year per clinic (count response variable). This data set was taken from the R book second edition by Michael Crawley, chapter 14.
+
+We'll first apply the **poisson** family to this GLM, since we are dealing with cancer counts. Sometimes there is a lot of variation in count data, which results in overdispersion. In a normal Poisson model, we expect the mean to equal variance, but when it is overdispersed, variance \> mean. A negative binomial model is then more suited.
+
+An example of overdispersion might be counts of feeding holes on different plants. The range of feeding holes may be between 0 and 10, but the average is 2. This indicates that there is a lot of variation in the data, and a typical Poisson model [that expects the mean to equal the variance] will underestimate this variation. This will likely result in a model that produces abnormal false positives, and report a predictor variable as being significant when it actually is not. A negative binomial model accounts for this overdispersion, correcting for this.
+
+```{r, message = FALSE}
+# read in the data
+cancer.data = read.table("data/therbook/clusters.txt", header = T)
+
+head(cancer.data)
+
+# Let's plot it
+ggplot2::ggplot(data = cancer.data, aes(x = Distance, y = Cancers)) +
+  geom_jitter(color = "firebrick", size = 3,
+              height = 0.04, width = 0, 
+              alpha = 0.5) +
+  # this adds a trendline
+  geom_smooth(method = "loess", linewidth = 1, col = "black", se = FALSE) +
+  xlab("Distance (km)") + 
+  ylab("Cancers")
+
+# Run a poisson GLM
+cancer.glm.poisson = glm(Cancers ~ Distance, family = poisson, 
+                         data = cancer.data)
+
+# Another approach, using the glmmTMB library
+cancer.glm.poisson.2 = glmmTMB::glmmTMB(Cancers ~ Distance, 
+                        family = poisson(link = "log"), 
+                        data = cancer.data)
+
+# Check the residuals and QQ plot
+DHARMa::plotResiduals(cancer.glm.poisson)
+# notice that there is significant overdispersion in the data
+DHARMa::plotQQunif(cancer.glm.poisson)
+
+# Run a negative binomial GLM -> this assumes that variance > mean, and is
+# often a better fit for most count data, particularly field-collected
+cancer.glm.negbin = glmmTMB::glmmTMB(Cancers ~ Distance, 
+                        family = nbinom2(link = "log"), 
+                        data = cancer.data)
+
+DHARMa::plotResiduals(cancer.glm.negbin)# Check the residuals and QQ plot
+# although the bottom line doesn't look perfect, this model is fine
+DHARMa::plotResiduals(cancer.glm.negbin)
+# no more overdispersion
+DHARMa::plotQQunif(cancer.glm.negbin)
+
+# let's run a test to check whether our data has too many zero values: termed
+# "zero inflation" 
+# since p > 0.05, we do not have an issue with zeroes
+DHARMa::testZeroInflation(cancer.glm.negbin)
+
+# if we did have an issue with zero-inflation in the Distance variable, we could add an argument to the glmmTMB() function to account for it, using ziformula = ~ Distance
+# interestingly, even though there wasn't an issue with zero inflation, when we add this into the model, it seems to improve!
+
+cancer.glm.negbin.zi = glmmTMB::glmmTMB(Cancers ~ Distance, 
+                        family = nbinom2(link = "log"), 
+                        ziformula = ~Distance,
+                        data = cancer.data)
+
+DHARMa::plotResiduals(cancer.glm.negbin.zi)
+DHARMa::plotQQunif(cancer.glm.negbin.zi)
+
+# if we look at the negative binomial vs negative binomial with zero inflation accounted for, there isn't a significant difference between the two models. In this case, go with the simplest one
+anova(cancer.glm.negbin, cancer.glm.negbin.zi, test = "Chisq")
+
+```
+
+Let's compare the Poisson and negative binomial models:
+
+```{r, message = FALSE}
+
+gtsummary::tbl_regression(cancer.glm.negbin, exponentiate = TRUE)
+
+anova(cancer.glm.poisson.2, cancer.glm.negbin, test = "Chisq")
+
+car::Anova(cancer.glm.negbin, test = "Chisq", type = "II")
+
+summary(cancer.glm.negbin)
+
+# beta 1 coefficient
+exp(-0.006041)
+
+```
+
+The anova() output shows that the negative binomial model provided a significantly better fit than the Poisson model (p \< 0.05), and we can also see that it yielded lower AIC, BIC values, and a log likelihood value closer to zero.
+
+Looking at the summary of the negative binomial model, we can conclude that a one kilometer increase in distance results in a decrease in the number of cancer patients by a factor of 0.9939772 -\> exp(-0.006041). Or, as a percentage: [0.9939772 - 1] \*100 = -0.6% -\> i.e. a 0.6% decrease in the number of cancer records for every 1 km increase in distance from the nuclear power plant. However, this result was not significant ($\chi^2$ = 1.7, d.f. = 1, p = 0.198).
+
+# More count data -\> horseshoe crabs
+
+## **POISSON AND NEGATIVE BINOMIAL**
+
+Let's have a look at another example of modelling using counts. [Brockman (1996)](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1439-0310.1996.tb01099.x) collected morphological data to explore female horseshoe crab (*Limulus polyphemus*) attractiveness to satellite males. The author measured female colour, spine condition, carapace width (cm), mass (kg), and the number of satellite males.
+
+```{r, message = FALSE}
+# read in the data
+crab.data = read.csv("data/satellites.csv")
+head(crab.data)
+str(crab.data)
+
+crab.data$color = as.factor(crab.data$color)
+crab.data$spine = as.factor(crab.data$spine)
+
+# let's have a look at carapace width versus the number of males
+ggplot(data = crab.data, aes(width.cm, nsatellites)) +
+  geom_jitter(color = "firebrick", size = 3, height = 0.2, width = 0, alpha = 0.5) +
+  geom_smooth(method = "loess", linewidth = 1, col = "black", se = FALSE) +
+  labs(x = "Carapace width (mm)", y = "No. male satellites") 
+
+# if you want to plot both mass and width in separate ggplot panels:
+crab_long = crab.data %>%
+  tidyr::pivot_longer(cols = c(width.cm, mass.kg), 
+               names_to = "variable", values_to = "value")
+
+# Plot using facets
+ggplot(crab_long, aes(value, nsatellites)) +
+  geom_jitter(color = "firebrick", size = 3, height = 0.2, width = 0, alpha = 0.5) +
+  geom_smooth(method = "loess", linewidth = 1, col = "black", se = FALSE) +
+  labs(x = NULL, y = "No. male satellites") +
+  facet_wrap(~variable, scales = "free_x") +
+  theme_classic()
+
+# There appears to be an upward trend, but let's proceed with carapace width
+# Let's fit a poisson GLM to find out whether this is significant
+crab.glm.poisson = glmmTMB::glmmTMB(nsatellites ~ width.cm, 
+                       family = poisson(link = "log"), data = crab.data)
+
+# Check the residuals and QQ plot
+DHARMa::plotResiduals(crab.glm.poisson)
+DHARMa::plotQQunif(crab.glm.poisson)
+
+# Let's fit a negative binomial model
+crab.glm.negbin = glmmTMB::glmmTMB(nsatellites ~ width.cm, 
+                       family = nbinom2(link = "log"), 
+                       data = crab.data)
+
+DHARMa::plotResiduals(crab.glm.negbin)
+DHARMa::plotQQunif(crab.glm.negbin)
+
+# another view of the summary output
+gtsummary::tbl_regression(crab.glm.negbin, exponentiate = TRUE)
+
+# compare models -> the negative binomial is significantly better!
+anova(crab.glm.poisson, crab.glm.negbin)
+
+# width does have a significant effect on the number of males
+car::Anova(crab.glm.negbin, test = "Chisq", type = "II")
+
+summary(crab.glm.poisson)
+summary(crab.glm.negbin)
+
+# beta coefficient
+exp(0.19207)
+
+(1.211755 - 1)*100
+
+# 95% confidence interval
+confint(crab.glm.negbin)
+
+exp(0.09875608)
+exp(0.2853893)
+
+```
+
+The beta coefficient suggests that for every cm increase in female carapace width, there will be an increase in male satellites by a factor of 1.2 (exp(0.19207)). This equates to an increased odds of an additional male by 21% *(1.211755 - 1) x100*. The 95% confidence interval suggests that a 1 cm increase in female carapace width will yield an increase in males by a factor of between 1.1 and 1.3. Since p \< 0.001, we can conclude that female carapace width has a significant effect on the number of satellite males ($\chi^2$ = 16.3, d.f. = 1, p \< 0.001).
+
+Let's include mass as an additional predictor variable:
+
+```{r, message = FALSE}
+
+crab.glm.negbin.additive = glmmTMB::glmmTMB(nsatellites ~ width.cm + mass.kg, 
+                       family = nbinom2(link = "log"), 
+                       data = crab.data)
+
+DHARMa::plotResiduals(crab.glm.negbin.additive)
+DHARMa::plotQQunif(crab.glm.negbin.additive)
+
+# compare models -> there isn't a significant difference between the models
+# i.e. adding mass did not improve the model
+anova(crab.glm.negbin, crab.glm.negbin.additive)
+
+# what if we include width and mass as an interaction term:
+crab.glm.negbin.multi = glmmTMB::glmmTMB(nsatellites ~ width.cm * mass.kg, 
+                       family = nbinom2(link = "log"), 
+                       data = crab.data)
+
+# we could also write the above as:
+# nsatellites ~ width.cm + mass.kg + width.cm:mass.kg
+
+DHARMa::plotResiduals(crab.glm.negbin.multi)
+DHARMa::plotQQunif(crab.glm.negbin.multi)
+
+# compare models -> the interaction term between mass and width marginally increased the model's fit ( p= 0.05)
+anova(crab.glm.negbin, crab.glm.negbin.multi)
+
+# these results suggest that it is mass that has the significant effect on male number, and that there is a significant interaction between female mass and width -> i.e. the effect of mass depends on width, and vice-versa
+car::Anova(crab.glm.negbin.multi, test = "Chisq", type = "III")
+summary(crab.glm.negbin.multi)
+```
+
+- The Intercept value of **-7.50871**, or exp(-7.50871) = 0.0005482879, is the expected number of male satellites when female mass and carapace width = 0. Although this is not biologically possible, it serves as a baseline. 
+- The width estimate value of **0.24603**, or exp(0.24603) = 1.28, indicates that for each 1 cm increase in carapace width (when mass = 0), the expected number of male satellites is multiplied by a factor of 1.28. This effect is not statistically significant.
+- The mass estimate value of **3.42012**, or exp(3.42012) = 30.57, indicates that for each 1 kg increase in female mass (when width = 0), the expected number of male satellites is multiplied by a factor of 30.57. This effect is statistically significant.
+- The interaction term estimate value of **-0.09706**, or exp(-0.09706) = 0.91, indicates that for each additional kilogram of female mass, the effect of carapace width on the expected number of male satellites decreases by a factor of 0.91 (or a decrease by 9.25%: [0.9075016 - 1] * 100 = -9.25%). The converse is also true, and this interaction is marginally significant (p = 0.055). This means that as mass increases, the effect of a larger carapace width on attracting males becomes less important, and vice-versa.
+
+If we wanted to use this model to make a prediction for the number of males on a female that has a carapace width of 25 cm and weight of 2 kg, we can use this formula:
+
+$$
+\mu = \exp(\beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p)
+$$
+
+We'll keep it on the log scale for now, and then exponentiate the final value:
+
+**log(μ) = -7.50871 + (0.24603 * 25) + (3.42012 * 2) + (-0.09706 * 25 * 2)**  
+**log(μ) = 0.62928**  
+**exp(0.62928) = 1.876259**   
+
+This means that a female (25 cm width and 2 kg mass) will have ~ 2 males, according to the model.
+
+Let's code this in R, using the ```predict()``` function:
+
+```{r, message = FALSE}
+
+# Create a new data frame with the desired values for width.cm and mass.kg
+new_crab = data.frame(width.cm = 25, mass.kg = 2)
+
+# Use the predict function to calculate the predicted value
+predicted_value = predict(crab.glm.negbin.multi, newdata = new_crab, type = "response")
+
+# Display the predicted value, already exponentiated to get it to the original scale
+predicted_value
+
+```
+
+# GLM notation, and a slightly more complex example
+
+So far we have only looked at modelling one predictor and one response variable. What if we want to look at multiple variables, with interactions?
+
+In modeling formulae, you will often find these symbols:
+
+Plus (+) inclusion of a variable into the model. This makes for an **additive** model
+
+Asterisk (\*) or colon (:) inclusion of a variable, and its interactions. This makes for a **multiplicative/interaction** model.
+
+For example:
+
+**larvae \~ female_mass + female_length** means that we want to model how the number of larvae are affected individually by female mass **AND** length (i.e. the effect of female mass on larval output does not depend on the effect of female length)
+
+**larvae \~ female_mass \* female_length** means that we want to look at how both female mass and length individually affect the number of larvae produced, **AND** whether female mass depends on female length, and vice-versa. A better way of writing this formula is:\
+**larvae \~ female_mass + female_length + female_mass:female_length**
+
+Let's look at an example where we are interested in looking at the effect of soil pH (categorical variable; low, mid, and high) and biomass (continuous variable) on the number of species recorded on plots of land. This was taken from the R Book, by Michael Crawley.
+
+```{r, message = FALSE}
+plant.species.data <- read.table ("data/therbook/species.txt", header = TRUE)
+head(plant.species.data)
+
+# make pH levels a factor, and force the order we want. Otherwise R orders
+# them alphabetically
+plant.species.data$pH = factor(plant.species.data$pH,
+                                  levels = c("low", "mid", "high"))
+str(plant.species.data)
+
+# Plot -> we can already see a negative relationship
+ggplot2::ggplot(data = plant.species.data,
+                aes(x = Biomass, y = Species, 
+                    colour = pH), alpha = 0.7 ) +
+  scale_colour_manual(values = c("grey", "darkorange", "black")) +
+  geom_point() +
+  theme(legend.position = "right")
+
+# if you want to plot just one pH group, use dplyr to filter the data:
+# dplyr::filter(plant.species.data, pH == "high")
+
+# Let's run a Poisson GLM, since we are dealing with species counts
+# Here, we will just model biomass as a predictor
+plant.glm.1 = glmmTMB::glmmTMB(Species ~ Biomass, 
+                               data = plant.species.data,
+                               family = poisson)
+
+summary(plant.glm.1)
+
+# Let's add pH in as well
+plant.glm.2 = glmmTMB::glmmTMB(Species ~ Biomass + pH, 
+                               data = plant.species.data,
+                               family = poisson)
+
+# if we compare model 1 and 2, model 2 is a significantly better fit. I.e.
+# pH has a significant effect on species numbers
+anova(plant.glm.1, plant.glm.2, test = "Chisq")
+
+# And now let's introduce an interaction between biomass and pH
+plant.glm.3 = glmmTMB::glmmTMB(Species ~ Biomass + pH + Biomass:pH, 
+                               data = plant.species.data,
+                               family = poisson)
+
+# compare model 2 and 3: the interaction between 
+# biomass and pH has a significant effect on species numbers on the plots,
+# since model 3 performs significantly better than model 2
+anova(plant.glm.2, plant.glm.3, test = "Chisq", type = "III")
+
+# let's run a Likelihood Ratio Test (LRT) on our ADDITIVE model
+# here we see that both biomass and pH have a significant effect on the number
+# of species recorded
+# we assume here that the relationship between biomass and species number is 
+# the same across all three pH levels
+car::Anova(plant.glm.2, test.statistic = "Chisq", type = "III")
+
+# let's run a LRT on the MULTIPLICATIVE model
+# here, we see a significant interaction between biomass and pH
+# this means that the effect of biomass on species number differs between
+# the three pH levels
+# here, we see that the effect of biomass (our predictor variable) 
+# on species number (response variable) is allowed to vary across pH levels
+car::Anova(plant.glm.3, test.statistic = "Chisq", type = "III")
+
+# model diagnostics
+plot(DHARMa::simulateResiduals(plant.glm.3) )
+
+# plot the fitted model
+# looks like a good model to use!
+ggplot2::ggplot(data = plant.species.data,
+                aes(x = Biomass, y = Species, 
+                    colour = pH), alpha = 0.7 ) +
+  scale_colour_manual(values = c("grey", "darkorange", "red")) +
+  geom_point() +
+  geom_smooth(method = "glm", method.args = list(family = "poisson"),
+              fill = "lightgrey", linewidth = 0.5, fullrange = TRUE) +
+  theme(legend.position = "right")
+
+```
+
+What can you conclude from this plot? Our LR test on model 3 suggests that biomass ($\chi^2$ = 47.5, d.f. = 1, p \< 0.001), pH ($\chi^2$ = 63.1, d.f. = 2, p \< 0.001), and the effect of biomass on species number across pH levels($\chi^2$ = 15.5, d.f. = 2, p \< 0.001) were all significant.
+
+Let's have a look at the summary output for our third (interaction) GLM:
+
+```{r, message = FALSE}
+
+summary(plant.glm.3)
+
+# another way of presenting the output:
+gtsummary::tbl_regression(plant.glm.3, exponentiate = TRUE)
+```
+
+The summary output for a more complex model can be tricky to interpret. Here, we can say that in the low pH group, when biomass = 0, species richness is 19.15 (**exp(2.95255**)) (**y Intercept**). In the low pH group, for every unit increase in biomass, species number **decreases** by a log odds of **0.26216** -\> which is an odds ratio of 0.77 (exp(**-0.26216**)). I.e. species number decreases by a factor of 0.77 for every unit increase in biomass (in the low pH group), or put another way, biomass decreases by 23% (1-0.77) x 100.
+
+The **pHmid** value of **0.48411** means that species richness increases by a factor of 1.62 (**exp(0.48411**)) more than the pH low group, when biomass = 0 (i.e. the y-intercept of the pH mid group is 19.5 \* 1.62 = 31.59). Similarly, the **pHhigh** value of **0.81557** means that species richness increases by a factor of 2.26 (**exp(0.81557**)) more than the pH low group, when biomass = 0 (i.e. the y-intercept of the pH high group is 19.5 \* 2.26 = 44.07).
+
+The **Biomass:pHmid** value of **0.12314** means that a one unit increase in biomass in the pH mid group will result in an increase in species richness by a factor of 1.13 (**exp(0.12314)**) more than the pH low group. Similarly, the value of **0.15503** in the **Biomass:pHhigh** means that a one unit increase in biomass in the pH high group will result in an increase in species richness by a factor of 1.17 (**exp(0.15503**)) more than the pH low group.
+    
+Let's look at marginal predictions for our three pH groups:
+
+```{r, message = FALSE}
+
+preds.spp = ggeffects::ggpredict(plant.glm.3, terms = c("Biomass", "pH"))
+
+preds = as.data.frame(preds.spp) %>%
+  dplyr::mutate(conf.high = dplyr::case_when(
+    conf.high > 1 ~ 1,
+    TRUE ~ conf.high)) %>%
+  dplyr::mutate(predicted = dplyr::case_when(
+    predicted > 1 ~ 1,
+    TRUE ~ predicted))
+
+head(preds.spp)
+
+
+# plot
+ggplot2::ggplot(data = dplyr::filter(preds.spp), aes(x = x, y = predicted)) +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high, fill = group, alpha = 0.5)) +
+  scale_fill_manual(values = c("grey", "darkorange", "red")) +
+  geom_line(aes(y = predicted)) +
+  labs(x = "Biomass",
+       y = "Species") +
+  facet_wrap(~group)
+
+```
+
+Perhaps we have new biomass and pH categories, and we want to put this into our model to predict species number. Here's how you can do that, using our third GLM (**plant.glm.3**). Below, we create a new data frame with the biomass values and pH categories we want to use to predict the species number. We'll predict for biomass = 20 at pH "mid", and biomass = 25 at pH = "high":
+
+```{r, message = FALSE}
+
+# create data frame with biomass and pH values of interest
+new.data = data.frame(Biomass = c(20, 25), pH = c("mid", "high"))
+# make the prediction, using the third GLM we created
+# type = "response" makes sure that our predicted values are on the original scale (number of species),
+# not on the log scale (used in a Poisson GLM)
+predicted_species = predict(plant.glm.3, newdata = new.data, type = "response")
+
+print(predicted_species)
+
+```
+
+Here, we see that a biomass of 20 at pH "mid" yields ~2 species, and a biomass of 25 at pH "high" yields ~3 species.
+
+# **Practice exercise 1**
+
+The data set **pollinator_abundance_data.csv** contains pollinator abundances on three different flower species, across three seasons (summer, autumn, and winter). Run the appropriate GLM on this data, and have a look at whether:
+
+(1) abundance differs across the three flower hosts\
+(2) abundance differs across seasons\
+(3) season affects abundance differently across the three flower species
+
+Additionally, answer the following:
+
+(1) What is the response variable?\
+(2) What is the predictor variable?\
+(3) Do we need to include an interaction term in this model?\
+(4) Which GLM family is appropriate for this data? Provide the relevant model diagnostic plots. (5) Provide box-and-whisker plots to graphically present the data
+
+# **Practice exercise 2**
+
+Have a look at the lung capacity data set from [Kahn 2017](https://www.tandfonline.com/doi/full/10.1080/10691898.2005.11910559), called `lungcap` in the ``GLMsData`` package. 
+
+(1) Generate a few box plots and scatter plots to explore the data. Plot FEV (lung capacity) in smokers vs non-smokers, and then account for height and age. What are your observations? Are they what you would expect?
+(2) Fit some Gaussian GLMs with different predictors and interaction terms, and find a suitable model
+(3) Interpret the results, and suggest reasons for any oddities
+
+# **Practice exercise 3**
+
+Use the `cheese` dataset in the ``GLMsData`` package to find out what makes a winning Cheddar cheese! The data comes from Moore and McCabe (1993).
+
+Find out whether acetic acid, H2S, or lactic acid has an effect on taste scores by running a Gaussian GLM. Does the model fit well? Which ingredient/s had a significant effect on scores?
+
+# **Practice exercise 4**
+
+Use the ``deposit`` dataset in the ``GLMsData`` package to analyse the effect of three different insecticides at different dosages on insect mortality. Which insecticide, at which dosage, was the most effective? What type of GLM is best to use here? 
+
+Submit your answers to me at [**clarke.vansteenderen\@ru.ac.za**](mailto:clarke.vansteenderen@ru.ac.za){.email} if you would like feedback.

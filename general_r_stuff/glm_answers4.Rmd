@@ -1,0 +1,112 @@
+---
+title: "glm_answers4"
+author: "Clarke van Steenderen"
+date: "2025"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Practice exercise 4
+
+```{r, message = FALSE}
+if (!require("pacman"))
+  install.packages("pacman")
+pacman::p_load(xlsx, janitor, ggplot2, Rmisc, dplyr, 
+               tidyverse, visreg, glmmTMB, gtsummary, effects, ggeffects,
+               patchwork, emmeans, GLMsData)
+
+# Set plot theme
+theme_set(theme_classic() +
+theme(panel.border = element_rect(colour = "black", fill = NA),
+axis.text = element_text(colour = "black"),
+axis.title.x = element_text(margin = unit(c(2, 0, 0, 0), "mm")),
+axis.title.y = element_text(margin = unit(c(0, 4, 0, 0), "mm")),
+legend.position = "none"))
+```
+
+```{r}
+library(GLMsData)
+data("deposit")
+
+head(deposit)
+
+poison.data = deposit %>%
+  janitor::clean_names()
+
+poison.data$deposit = as.factor(poison.data$deposit)
+poison.data$survived = poison.data$number - poison.data$killed
+
+# get proportions of deaths
+poison.data$killed.p = poison.data$killed/poison.data$number
+
+ggplot2::ggplot(data = poison.data, aes(x = deposit, 
+                                        y = killed.p, 
+                                        fill = insecticide)) +
+  geom_bar(alpha = 0.5, colour = "black", stat = "identity", 
+           position = position_dodge()) +
+  scale_fill_manual(values = c("yellow", "darkorange", "brown")) +
+  theme(legend.position = "right")
+
+ggplot2::ggplot(data = poison.data, aes(x = insecticide, 
+                                        y = killed)) +
+  geom_boxplot(alpha = 0.5, fill = "lightblue")
+
+ggplot2::ggplot(data = poison.data, aes(x = deposit, 
+                                        y = killed)) +
+  geom_boxplot(alpha = 0.5, fill = "darkred")
+
+```
+
+```{r}
+poison.glm.gaus = glm(killed.p ~ insecticide + deposit, data = poison.data,
+                   family = gaussian)
+
+DHARMa::simulateResiduals(poison.glm.gaus, plot = TRUE)
+
+poison.glm.bin1 = glm(killed.p ~ insecticide + deposit, data = poison.data,
+                   weights = number, # NB
+                   family = binomial(link = "logit"))
+
+DHARMa::simulateResiduals(poison.glm.bin1, plot = TRUE)
+car::Anova(poison.glm.bin1, type = "II")
+
+# do exactly the same thing, without the weights argument
+poison.glm.bin2 = glm(cbind(killed, survived) ~ insecticide + deposit, 
+                   data = poison.data,
+                   family = binomial(link = "logit"))
+
+DHARMa::simulateResiduals(poison.glm.bin2, plot = TRUE)
+car::Anova(poison.glm.bin2, type = "II")
+
+summary(poison.glm.bin1)
+summary(poison.glm.bin2)
+
+posthoc.poison.1 = emmeans::emmeans(poison.glm.bin2, 
+                                  pairwise ~ insecticide, adjust = "tukey")
+
+posthoc.poison.1$contrasts %>%
+  summary(infer = TRUE)
+
+posthoc.poison.2 = emmeans::emmeans(poison.glm.bin2, 
+                                  pairwise ~ deposit, adjust = "tukey")
+
+posthoc.poison.2$contrasts %>%
+  summary(infer = TRUE)
+
+
+```
+
+The base case here is insecticide A at deposit value 2. The intercept value therefore means that the proportion of insects killed is **exp(-2.8363)** = 0.05864224 = ~ 6%.
+
+Insecticide B is **exp(0.3060)** = 1.4 times more likely to kill an insect than insecticide A
+
+Insecticide C is **exp(2.9598)** = 19.3 times more likely to kill an insect than insecticide A
+
+Deposit 2.64 is **exp(1.1249)** = 3.1 times more likely to kill an insect than Deposit 2
+
+Deposit 3.48 is **exp(2.2848)** = 9.8 times more likely to kill an insect than Deposit 2
+
+Deposit 8 is **exp(3.8384)** = 46.5 times more likely to kill an insect than Deposit 2

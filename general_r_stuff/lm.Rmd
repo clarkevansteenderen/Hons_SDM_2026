@@ -1,0 +1,333 @@
+---
+title: "Basic Linear Models in R"
+author: "Clarke van Steenderen"
+date: "2025-02"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE, out.width="60%"}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Running Linear Models in R
+
+A linear model is used when one wants to investigate the relationship between predictor variables (x) (e.g. body mass, temperature, humidity) and a continuous response variable (y) (e.g. fecundity, longevity, height). It assumes a linear relationship, and can be used to make predictions (i.e. can x be used to predict y?). When the response variable takes the form of a binomial value (e.g. dead or alive, 1 or 0), or count, for example, then a generalised linear model (GLM) is appropriate as this method can handle data with non-normal error distributions and variances. 
+
+We will work with data from an experiment that aimed to find whether insect body mass and environmental temperature has an effect on reproductive output. There are four temperature levels: 15, 20, 25, and 30 degrees Celsius. The number of larvae produced were recorded per treatment. This tutorial was adapted from  [Guy Sutton's GitHub page](https://github.com/guysutton/CBC_coding_club/blob/master/scripts/tut_1_intro_to_linear_models.R).
+
+```{r, message=FALSE}
+
+if (!require("pacman"))
+  install.packages("pacman")
+pacman::p_load(xlsx, janitor, ggplot2, Rmisc, dplyr, tidyverse, effectsl)
+
+# read in the data
+in.data = readxl::read_excel("data/poisson_data.xlsx")
+# or as a csv file
+in.data = read.csv("data/poisson_data.csv")
+
+str(in.data)
+
+# do some preliminary visualisation
+ggplot2::ggplot(data = in.data, aes(x = adult_mass, y = larvae)) +
+  geom_point() +
+  theme_classic()
+
+# how is the data distributed?
+hist(in.data$adult_mass)
+
+# are there outliers?
+raw_data <- in.data %>%
+  dplyr::mutate(adult_mass = as.factor(adult_mass))
+
+ggplot(data = raw_data, aes(x = adult_mass, y = larvae)) +
+  geom_boxplot(fill = "lightgreen", alpha = 0.6) +
+  theme_classic()
+
+```
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+# Set plot theme
+theme_set(theme_classic(base_size = 12) +
+theme(panel.border = element_rect(colour = "black", fill = NA),
+axis.text = element_text(colour = "black"),
+axis.title.x = element_text(margin = unit(c(2, 0, 0, 0), "mm")),
+axis.title.y = element_text(margin = unit(c(0, 4, 0, 0), "mm")),
+legend.position = "none"))
+```
+
+We can now run a linear model to see whether adult mass has an effect on the number of larvae produced. We use the function **lm()**, and tell it that we want to investigate how our response variable (y) is affected by the predictor variable (x). This is written in the form y ~ x, where the tilde (~) means "according to" or "affected by". Below, the code says "how is the number of larvae affected by adult weight?". The general form of a linear model is:
+
+**model1 = lm(y ~ x, data = data)**
+
+**model1** is the name we are assigning to our model, where it will be saved to       
+**lm** is the function "linear model" that is run in R       
+**data** is the name of the dataset we are interested in    
+**y** is our response variable, from **data**    
+**x** is our predictor variable, from **data**
+
+Our linear regression equation can be written in the form **y = mx + c**, such that:   
+
+**larvae = $\beta_0$ + $\beta_1$(adult mass) + $\epsilon_i$**        
+
+Where $\beta_0$ is the y-intercept (i.e. the number of larvae when mass = 0), and $\beta_1$ is the gradient/slope coefficient (i.e. the change in the number of larvae for every unit increase in adult body mass). The $\epsilon_i$ part is a random error term, which indicates the difference between the actual number of larvae (y values), and the expected number of larvae based on the linear model. This gives an indication of how much the measured number of larvae  was not due to the linear effect of adult body mass.
+
+```{r, message=FALSE}
+
+linmod1 = lm(larvae ~ adult_mass, data = in.data)
+
+```
+
+We need to make sure that running a linear model was statistically sound. The underlying assumptions include:
+
+* **Linearity**: that there is a linear relationship between x and y. You can check this by having a look at a plot of residual vs fitted plot, where you expect to see residual values clustering around the y = 0 line, and no clustering/pattern in the points
+
+* **Independence**: that data points are independent -> this depends on the experimental design. This means that the data collected from one plot/individual/area etc. is not affected by the data collected in others. For example, perhaps one wants to investigate behavioural patterns in a particular species in an enclosure. You might take measurements on multiple individuals in that enclosure, but not realise that the behaviour of one individual may affect that of others. This would be non-independent data. Non-independence can also come about due to spatial autocorrelation: measurements taken from areas that are geographically close together are more likely to share similar features that might be different from those that you are actually measuring. For example, maybe you want to look at the relationship between the abundance of a particular plant and a soil nutrient (e.g. nitrogen). Taking these measurements in plots of land that are close together (spatially autocorrelated) might lead one to conclude that a high abundance of the plant across plots may be linked to a high nitrogen concentration, when actually, they have similar abundances due to another reason that is linked to their spatial proximity (perhaps they are in an area with fewer herbivores, maybe there is greater access to water in that particular area, etc.).
+
+* **Normality of residuals**: that a QQ (quantile-quantile) plot of observed versus expected residuals cluster around a y = x straight line (gradient = 1), with no patterning. A kolmogorv-Smirnoff (KS) test can tell whether residuals follow a normal distribution (p > 0.05) or not (p < 0.05). 
+
+* **Equal variance**: that the residual vs fitted value plot shows an equal distribution of y-values (sometimes referred to as a "shotgun" plot, or "homoscedasticity"); i.e. no patterning. DHARMa plots show three horizontal dotted lines -> at 0.25, 0.5, and 0.75. We should see horizontal bold lines falling on all three of these.
+
+Let's make sure that our residuals are normally distributed. When we create a QQ plot, we are looking for a straight line - there should be no pattern in the data.
+
+```{r, message=FALSE}
+
+# QQ plot
+plot(linmod1, which = 2)
+
+# residuals
+resids = resid(linmod1) 
+resids.df = as.data.frame(resids)
+
+resids.mean = mean(resids.df$resids)
+
+# plot a histogram -> appears that the resids are not normally distributed
+hist(resids)
+
+ggplot2::ggplot(data = resids.df, aes(y = resids)) +
+  #geom_histogram() +
+  geom_density() +
+  coord_flip() + 
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray") +
+  geom_hline(yintercept = resids.mean, linetype = "dashed", color = "darkred")
+
+# have a look at the homogeneity of variance
+# ideally, the red line should lie on the y = 0 axis line, and there should be
+# no pattern in the points
+plot(linmod1, which = 1)
+
+# you can also use the DHARMa package:
+DHARMa::plotResiduals(linmod1)
+DHARMa::plotQQunif(linmod1)
+
+# you could also run it like this, setting it to 1000 simulations
+DHARMa::simulateResiduals(linmod1, n = 1000, plot = TRUE)
+
+```
+
+There appears to be equality of variance (even though the residual histogram showed some positive skewness), and the DHARMa QQ plot suggests normality of the residuals. We could explore a GLM at this point, but for the sake of running a LM, let's continue:
+
+```{r, message=FALSE}
+
+summary(linmod1)
+
+# let's get an analysis of deviance table. This tells us that adult mass had
+# a significant positive effect on the number of larvae produced
+car::Anova(linmod1, test = "Chisq", type = "II")
+# same as
+anova(linmod1, test = "F")
+
+# Get the beta 1 value
+# < 0 means that the response decreases with greater predictor values
+# > 0 means that the response increases with greater predictor values
+coef(linmod1)[2]
+
+```
+
+Since p < 0.05, we can conclude that adult mass does have a significant effect on reproductive output. The $\beta_1$ estimate value of 2.61 means that there is a positive relationship between the predictor and response variable. This value also means that for every 1 unit increase in adult body mass, reproductive output increases by 2.6 individual larvae (absolute value).
+
+```{r, message=FALSE}
+ggplot2::ggplot(data = in.data, aes(x = adult_mass, y = larvae)) +
+  geom_point() +
+  geom_smooth(method = "lm", fill = "lightgrey", linewidth = 0.5, fullrange = TRUE)
+  
+```
+
+
+Let's have a look at confidence intervals (CI) now. The 95% CI tells us how much uncertainty is in the model.
+
+```{r, message=FALSE}
+
+confint(linmod1)
+
+```
+
+This tells us that the 95% confidence interval for adult body mass is between 1.53 - 3.69. In other words, a 1 g increase in adult body mass will yield in the region of 1.53 - 3.69 more larvae. The 95% CI implies that if the experiment were to be repeated 100 times, our estimate value will fall within the 95% CI range (1.53 - 3.69) 95 times.
+
+How much variation is explained by the model? We'll get an R-squared value to determine this, which tells you how much of the variation in the response variable (larvae) is explained by the predictor (adult mass).
+
+```{r, message=FALSE}
+summary(linmod1)$adj.r.squared
+```
+
+This means that 22% of the variation observed in reproductive output is explained by adult body mass.
+
+Let's do some plotting:
+
+```{r, message=FALSE}
+
+adult_mass = seq(1, 15, 1)
+
+preds = predict(linmod1, list(temp = adult_mass), interval = "confidence") %>%
+  as.data.frame() 
+
+preds <- dplyr::bind_cols(preds, as.data.frame(adult_mass))
+
+head(preds)
+
+# Plot your model predictions
+ggplot() + 
+  # Add a ribbon of 95% confidence intervals
+  geom_ribbon(data = preds, aes(x = adult_mass, ymin = lwr, ymax = upr), 
+              fill = "lightblue", alpha = 0.5) + 
+  # Add line of model prediction
+  geom_line(data = preds, aes(x = adult_mass, y = fit)) +
+  # Define y-axis limits
+  scale_y_continuous(breaks = seq(0, 60, 10),
+                     limits = c(0, 60)) +
+  # Define x-axis limits
+  scale_x_continuous(breaks = seq(0, 15, 3),
+                     limits = c(0, 15)) + 
+  # Write x and y axis labels
+  labs(x = "Adult body mass (g)",
+       y = "No. of larvae produced",
+       subtitle = "(a)") +
+  theme_classic()
+
+```
+
+Write this up:
+
+Larger females produced more larvae than smaller adults (P < 0.05). Approximately 21% of the variation in fecundity was explained by female body mass (Adj. R-squared = 0.21).For every 1g increase in adult body mass, adults produce approximately 2.61 more larvae (95% CI: 1.52 - 3.68).
+
+# **Hypothesis testing**
+
+When we talk about hypothesis testing, we are referring to the NULL (H0) and ALTERNATIVE (H1) hypothesis. Here, the null hypothesis would be that adult body mass has no significant effect on the number of larvae produced. The alternative hypothesis is that mass does have a significant effect on larval output. 
+
+If we want to show that including body mass as a predictor in our model explains the data better, we can create two models representing our H0 and H1. Let's implement a GLM here, instead of the LM above. We'll apply the Gaussian family for normally-distributed data:
+
+```{r, message=FALSE}
+H0.model = glm(larvae ~ 1, data = in.data, family = gaussian)
+H1.model = glm(larvae ~ 1 + adult_mass, data = in.data, family = gaussian)
+
+summary(H0.model)
+summary(H1.model)
+
+# let's quickly plot this
+
+# H0
+ggplot(in.data, aes(x = adult_mass, y = larvae)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ 1, se = FALSE, color = "red") +
+  labs(x = "Adult mass", y = "Larvae count") +
+  ggtitle("Null hypothesis, H0", subtitle = "No effect of adult mass on larvae number")
+
+# H1
+ggplot(in.data, aes(x = adult_mass, y = larvae)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE, color = "red") +
+  labs(x = "Adult mass", y = "Larvae count") +
+  ggtitle("Alternative hypothesis, H1", subtitle = "Significant effect of adult mass on larvae number")
+
+# Perform a Likelihood Ratio Test (LRT) to assess goodness of fit
+lmtest::lrtest(H0.model, H1.model)
+```
+
+These results indicate that there is a significant effect of adult mass on larval output ($\chi2$ = 20.7, df = 1, p < 0.001), and that the second model, H1 (alternative), is significantly better than the null hypothesis. The log likelihood is higher for H1 (-281.19), which signifies that it is the better model.
+
+Like we did earlier, here's another way of making predictions and plotting the model:
+
+```{r, message=FALSE}
+# Extract expected relationship between X and Y
+ preds.larvae <- ggeffects::ggeffect(
+ model = H1.model,
+ terms = c("adult_mass [0:15 by = 2]"),
+ type = "fixed",
+ interval = "confidence"
+ ) %>%
+ # Convert predictions into a data.frame
+ as.data.frame() %>%
+ # Rename columns for easier plotting
+ dplyr::mutate(
+ adult_mass = x
+ )
+
+# another way of plotting the model
+ggplot2::ggplot(data = in.data, aes(x = adult_mass, y = larvae)) +
+  geom_point() +
+  geom_smooth(method = "glm", method.args = list(family = "gaussian"), 
+              se = TRUE, color = "black", fill = "lightgrey")
+  
+
+```
+
+## A note on Chi-square Goodness-of-Fit tests ($\chi^2$)
+
+If you have a frequency table, perhaps with frequencies/counts for different species, then a Chi-square test is appropriate. Ask yourself "does this data have a response and predictor variable?". If it does, then a linear model or GLM is the way to go. If not, use a Chi-square test.
+
+For example, perhaps we have this data of counts for some South African birds. Let's run a Chi-square test:
+
+```{r, message=FALSE}
+bird_data = data.frame(
+  species = c(
+    "Cape Sparrow",
+    "Fiscal Shrike",
+    "Cape Robin-Chat",
+    "Southern Masked Weaver",
+    "Hadeda Ibis",
+    "Helmeted Guineafowl"
+  ),
+  frequency = c(15, 12, 9, 8, 8, 6)
+)
+
+bird_data
+
+observed_counts = bird_data$frequency
+# get the mean, and assume that this mean is the expected value across all species
+# i.e. the null hypothesis is that all species are equally likely
+expected_counts = rep(mean(observed_counts), length(observed_counts))  
+
+# Run the chi-square test
+# p is the probability of finding any one of these species under the null hypothesis
+# since we have 6 species here, the probability should be equal for all -> i.e. 1/6
+chisq_test = chisq.test(observed_counts, p = rep(1/length(observed_counts), length(observed_counts)))
+
+# Print test results
+chisq_test
+```
+
+Here, the p-value of 0.36 (> 0.05) means that there is no difference from the null hypothesis -> i.e. the frequencies recorded do not differ significantly from the expected equal distribution. All species are equally as likely to occur.
+
+If we had a different probability expectation, the values for the p argument need to be changed accordingly. E.g. perhaps we know that the Hadeda ibis occurs more frequently than the other birds (maybe 0.25 probability). We could change this:
+
+```{r, message=FALSE}
+
+# 0.75/5 = 0.15 for the remaining birds, assuming that they are all equally as likely to occur
+expected_probs = c(0.15, 0.15, 0.15, 0.15, 0.25, 0.15)
+
+# Run the chi-square test
+# p is the probability of finding any one of these species under the null hypothesis
+# since we have 6 species here, the probability should be equal for all -> i.e. 1/6
+chisq_test = chisq.test(observed_counts, p = expected_probs)
+
+# Print test results
+chisq_test
+
+```
+
+Although the p-value is lower, it is still not significant.

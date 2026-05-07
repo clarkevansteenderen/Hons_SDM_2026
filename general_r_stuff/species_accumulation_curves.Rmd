@@ -1,0 +1,296 @@
+---
+title: "Species accumulation curves and diversity indices"
+author: "Clarke van Steenderen"
+date: "2025-02"
+output:
+  pdf_document:
+    #toc: true
+    #toc_depth: 3
+    #toc_float: true
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Using the *vegan* package to compute species accumulation curves
+
+A species accumulation curve (SAC), also sometimes called a species richness curve, is a means of estimating species richness in a particular area as sampling effort increased. The x-axis shows the cumulative number of surveys/collections, and the y-axis shows the cumulative number of species found. A curve that reaches an asymptote suggests that further sampling is unlikely to yield further species, while a curve that is steadily increasing suggests that further sampling effort is required.
+
+The first section of this tutorial has been adapted from Guy Sutton's  [blogpost](https://guysutton.netlify.app/posts/2020-10-29-automated-plotting-of-species-accumulation-curves-by-group/).
+
+We will be using a data set containing the insect community associated with the *Lycium ferocissimum* shrub (African boxthorn) native to South Africa. Here, we want to find out whether the sampling effort so far has likely found all the potential insect biocontrol agents on this shrub.
+
+**Let's load up the data into R!**
+
+
+```{r, message = FALSE}
+
+# install the required packages, if not available already
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, 
+               tidyr, 
+               janitor,
+               vegan,
+               readr,
+               magrittr)
+
+# Read in the data file
+sp_comm <- readr::read_csv("data/species_abundance_matrix.csv") %>%
+# Clean column names 
+  janitor::clean_names() %>%
+  dplyr::mutate(season = dplyr::if_else(season == 1, "Summer", "Winter"))
+
+# Check the data contents 
+dplyr::glimpse(sp_comm)
+
+# You can also view the first six rows
+head(sp_comm)
+
+```
+
+Note the use of the pipe operator above (**%>%**). This comes from the **magrittr** package, and it allows for a series of functions to be applied to an object. Much like pushing something through a pipe, where it gets modified along its path. For example, if we create a variable called "var", and we want to first assign it a value of 1, then add 5 to it, and then square root it, we could write this as:
+
+```{r, message = FALSE}
+var = 1 %>%       
++ 5 %>%       
+sqrt()  
+
+var
+```
+
+We can now run a species accumulation curve (SAC) analysis. We first need to remove the first five columns of the dataset, so that we are left with only the species abundance values. Once this has been done, we can use the **poolaccum()** function from the **vegan** package:
+
+```{r, message = FALSE}
+sac_raw <- sp_comm %>%
+  # Remove site description variables 
+  dplyr::select(-c(provinces, climatic_zones, site, season, haplotype)) %>%
+  # Compute SAC
+  vegan::poolaccum()
+
+```
+
+In this output:
+
+* N = number of surveys (sampling effort)
+* S = observed species richness
+* lower2.5 = lower 95% confidence interval of S
+* upper97.5 - upper 95% confidence interval of S
+
+```{r, message = FALSE}
+
+# Extract observed richness (S) estimate 
+obs <- data.frame(summary(sac_raw)$S, check.names = FALSE)
+colnames(obs) <- c("N", "S", "lower2.5", "higher97.5", "std")
+head(obs)
+
+```
+
+Now we can plot sampling effort (N) against observed species richness (S) using **ggplot**. The geom_ribbon() line adds the confidence intervals as a shaded band to the trend line.
+
+```{r, message = FALSE}
+
+ggplot(data = obs, aes(x = N, y = S)) +
+  # Add confidence intervals
+  geom_ribbon(aes(ymin = lower2.5, ymax = higher97.5), alpha = 0.5, fill = "lightblue") +
+  # Add observed richness line 
+  geom_line() +
+  labs(x = "Number of surveys",
+       y = "Observed species richness",
+       subtitle = "Result: More surveys are required to find all the insects on this plant") +
+  theme_classic()
+
+```
+
+This SAC shows that additional surveys are likely to yield a greater species diversity, since the curve has not reached an asymptote yet. 
+
+## Extrapolating -> how do our observed species richness values compare to extrapolations?
+
+```{r, message = FALSE}
+
+class(sac_raw)
+plot(sac_raw)
+
+# Extract chao -> one of the measures of extrapolated species richness
+chao <- data.frame(summary(sac_raw)$chao, check.names = FALSE)
+colnames(chao) <- c("N", "S", "lower2.5", "higher97.5", "std")
+head(chao)
+
+# Extract S -> observed spp richness
+obs <- data.frame(summary(sac_raw)$S, check.names = FALSE)
+colnames(obs) <- c("N", "S", "lower2.5", "higher97.5", "std")
+head(obs)
+
+chao %>%
+  ggplot(data = ., aes(x = N, y = S)) +
+  # Add confidence intervals
+  geom_ribbon(aes(ymin = lower2.5, ymax = higher97.5), alpha = 0.2) +
+  geom_line() +
+  # Add S richness -> our observed spp richness
+  geom_line(data= obs, aes(x = N, S), linetype = "dashed", col = "red") +
+  labs(x = "No. of surveys", y = "Species richness",
+       subtitle = "Observed richness (red dashed line) is much 
+       lower than expected - more surveys are required") +
+  theme_classic()
+
+```
+
+## Species diversity
+
+What about species diversity across provinces, climatic zone, and season? Let's
+calculate species numbers:
+
+```{r, message = FALSE}
+
+# subset the data, so that it contains only abundance values, not grouping variables
+sp_num_input = sp_comm %>%
+  # Remove site description variables 
+  dplyr::select(-c(provinces, climatic_zones, site, season, haplotype))
+
+# get species numbers by:
+
+# per row/sampling event
+overall_sp_num = vegan::specnumber(sp_num_input)
+
+# climatic zones
+clim_zones = vegan::specnumber(sp_num_input, group = sp_comm$climatic_zones)
+
+# provinces
+provs = vegan::specnumber(sp_num_input, group = sp_comm$provinces)
+
+# seasons
+seasons = vegan::specnumber(sp_num_input, group = sp_comm$season)
+
+```
+
+We can now create plots for each of these variables, starting with province.
+
+```{r, message = FALSE}
+
+# create a new dataframe containing the species numbers with additional information
+overall_sp_num_df = overall_sp_num %>% 
+                    as.data.frame() %>%
+                    dplyr::mutate(province = sp_comm$provinces,
+                                  clim = sp_comm$climatic_zones,
+                                  season = sp_comm$season) 
+
+colnames(overall_sp_num_df) = c("sp_number", "province", "clim", "season")
+
+# create factors
+overall_sp_num_df$province = as.factor(overall_sp_num_df$province)
+overall_sp_num_df$clim = as.factor(overall_sp_num_df$clim)
+overall_sp_num_df$season = as.factor(overall_sp_num_df$season)
+
+head(overall_sp_num_df)
+
+# Let's quickly run some analysis of variance tests to have a quick look at whether
+# there are differences across provinces, climates, and seasons
+
+# is there a difference in species numbers across provinces?
+summary(aov(sp_number ~ province, data = overall_sp_num_df) )
+
+# between climatic zones?
+summary(aov(sp_number ~ clim, data = overall_sp_num_df) )
+
+# seasons?
+summary(aov(sp_number ~ season, data = overall_sp_num_df) )
+
+# Let's get a quick stats summary across provinces:
+Rmisc::summarySE(data = overall_sp_num_df, measurevar = "sp_number", 
+                                 groupvars = "province")
+
+# Choose some colours for each province. Remember that R colours groups alphabetically, so the Eastern Cape will get the first colour (lightsalmon1), and the Western Cape will get the second (palegreen4)
+pal.prov <- c("lightsalmon1", "palegreen4")
+
+plot_by_province <- ggplot2::ggplot(overall_sp_num_df, aes(x = province, 
+                                                           y = sp_number, 
+                                                           fill = province)) +
+  geom_boxplot() +
+  scale_fill_manual(values = pal.prov) +
+  scale_x_discrete(labels = c("Eastern Cape \n (n = 32)", "Western Cape \n (n = 24)")) + 
+  # add black circles for means
+  stat_summary(fun = mean, geom = "point", color = "black", size = 3) +
+  labs(x = "Province",
+       y = "Number of species",
+       title = "Species richness by province",
+       # change the legend title
+       fill = "Province") +
+  theme_classic()
+
+plot_by_province
+
+```
+
+Let's do the same for climatic zones:
+
+```{r, message = FALSE}
+
+# Let's get a quick stats summary across climates:
+Rmisc::summarySE(data = overall_sp_num_df, measurevar = "sp_number", 
+                                 groupvars = "clim")
+
+# check how many groups there are in clim
+levels(overall_sp_num_df$clim)
+
+# Choose some colours for each climate type
+pal.clim <- c("lightsalmon1", "palegreen4", "lightyellow2", 
+         "powderblue", "lightgrey", "lightpink")
+
+plot_by_clim <- ggplot2::ggplot(overall_sp_num_df, aes(x = clim, 
+                                                           y = sp_number, 
+                                                           fill = clim)) +
+  geom_boxplot() +
+  scale_fill_manual(values = pal.clim) +
+  scale_x_discrete(labels = c("Bsh \n (n = 12)", "Bsk \n (n = 2)", 
+                              "Cfa \n (n = 14)", "Cfb \n (n = 10)",
+                              "Csa \n (n = 6)", "Csb \n (n = 12)")) + 
+  # add black circles for means
+  stat_summary(fun = mean, geom = "point", color = "black", size = 3) +
+  labs(x = "Climate",
+       y = "Number of species",
+       title = "Species richness by climate",
+       # change the legend title
+       fill = "Climate") +
+  theme_classic()
+
+plot_by_clim
+
+```
+
+Try to plot the same as above, but for season.
+
+## Diversity Indices
+
+Let's calculate Shannon diversity index, using the original species count data:
+
+```{r, message = FALSE}
+
+shan.div = vegan::diversity(sp_num_input, index = "shannon")
+head(shan.div)
+
+# create a new dataframe containing the diversity indices with additional information
+shan.div.df = shan.div %>% 
+              as.data.frame() %>%
+              dplyr::mutate(province = sp_comm$provinces,
+                            clim = sp_comm$climatic_zones,
+                            season = sp_comm$season) 
+
+colnames(shan.div.df) = c("shannon", "province", "clim", "season")
+
+# create factors
+shan.div.df$province = as.factor(shan.div.df$province)
+shan.div.df$clim = as.factor(shan.div.df$clim)
+shan.div.df$season = as.factor(shan.div.df$season)
+
+# is there a difference in Shannon diversity across provinces?
+summary(aov(shannon ~ province, data = shan.div.df) )
+
+# between climatic zones?
+summary(aov(shannon ~ clim, data = shan.div.df) )
+
+# seasons?
+summary(aov(shannon ~ season, data = shan.div.df) )
+
+```
+
+Can you create some box plots for the Shannon diversity indices across the different groups?
